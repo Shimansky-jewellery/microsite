@@ -2821,6 +2821,35 @@
       background: var(--soft-gold);
     }
 
+    .popup-slide-caption {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 2.35rem;
+      z-index: 3;
+      text-align: center;
+      color: var(--ivory);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      transition: opacity 320ms ease;
+      pointer-events: none;
+    }
+
+    .popup-slide-caption.visible {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+      .popup-slide-caption {
+        font-size: 0.64rem;
+        bottom: 2.1rem;
+      }
+    }
+
     @media (max-width: 768px) {
       .popup-slide-gallery {
         height: 20svh;
@@ -3206,21 +3235,23 @@
       <div class="modal-section popup-gallery-section">
         <div class="popup-slide-gallery" data-popup-gallery="story"
           aria-label="The Shimansky Diamond Journey Story image slideshow">
-          <div class="popup-slide active" style="
+          <div class="popup-slide active" data-caption="Rough Diamond Selection" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1fIKi90an6wAhgRIqzFLY1BDxXwSoMe7Y&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Expert Cutting & Polishing" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1PvNcAK4h5Va8qfgUpRKiB-VcUW2sDr_X&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Master Craftsmanship" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1Osl_72SJOJJMZKH3KKAFvXoJC5rigXnR&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Setting the Stone" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1xYlwQ7BoAr2C4COJEtQr2ZQB87UWMG4_&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="The Finished Piece" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1_UDrvL_wBT0PljYOl6828Egs2DGR_qvM&sz=s1800&quot;);
               "></div>
+
+          <div class="popup-slide-caption"></div>
 
 
           <div class="popup-slide" data-delay="7000" style="
@@ -3324,36 +3355,44 @@
       <div class="modal-section popup-gallery-section">
         <div class="popup-slide-gallery" data-popup-gallery="rockwell"
           aria-label="Rockwell Diamond Experience image slideshow">
-          <div class="popup-slide active" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1kk0ydLYmZLSxn49PgyQRTfzHcAiqJKDH&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1sNXBc4MjiEAbZInnE_nSnAhtOweQBJtH&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=18cw3Q0q4lBXNOinsXEN9SNOSquyCKIuT&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1EDi7WsMTbISxxDwD7xAyl4J7T3KT0RIA&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1wlxBoRTkjdRpDlS84-FIR3hnAGsVQasj&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=19EL1s1rgbLpewgBnPp4X2AP9YGPhpngi&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1O08aaOkiZAbZYjsOpsmXOk6I_FBW7KS7&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1qvKmOUowMCDcC87aKAxQoBDOLYc7JpYC&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1XjihRrC7PLtV7x6t6F0E9V9coupwWeKu&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Welcome To The Rockwell" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=11maL8eopxoDrPDFrcReiGrXgXClGI5b6&sz=s1800&quot;);
               "></div>
+          <div class="popup-slide" data-caption="A Private Factory Tour" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=18cw3Q0q4lBXNOinsXEN9SNOSquyCKIuT&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Guided By A Master Craftsman" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1sNXBc4MjiEAbZInnE_nSnAhtOweQBJtH&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Guests Try Their Hand At Polishing" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1EDi7WsMTbISxxDwD7xAyl4J7T3KT0RIA&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Hands On The Polishing Wheel" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1wlxBoRTkjdRpDlS84-FIR3hnAGsVQasj&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide active" data-caption="The Diamond Reveal" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1kk0ydLYmZLSxn49PgyQRTfzHcAiqJKDH&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Your Personalised Certificate" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=19EL1s1rgbLpewgBnPp4X2AP9YGPhpngi&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="A Toast To Remember" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1O08aaOkiZAbZYjsOpsmXOk6I_FBW7KS7&sz=s1800&quot;);
+              "></div>
+
+
+
+
+
+
+          <div class="popup-slide" data-caption="The Gin Tasting" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1qvKmOUowMCDcC87aKAxQoBDOLYc7JpYC&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Sharing The Moment" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1XjihRrC7PLtV7x6t6F0E9V9coupwWeKu&sz=s1800&quot;);
+              "></div>
+
+
           <div class="popup-slide" data-delay="7000" style="
                 background: #000000;
                 display: flex;
@@ -3367,6 +3406,7 @@
                 text-align: center;
                 padding: 1.5rem;
               ">The Rockwell Diamond Experience</div>
+          <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
               &lt;
@@ -3547,39 +3587,40 @@
       <div class="modal-section popup-gallery-section">
         <div class="popup-slide-gallery" data-popup-gallery="museum"
           aria-label="Cape Town Diamond Museum image slideshow">
-          <div class="popup-slide active" style="
+          <div class="popup-slide active" data-caption="Welcome To The Museum" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1CKW3pM8K5302yQkCdLIcDBKWEzonAPzv&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1J1exmCnNdKscJu4TU_oeNUflwmZtFuHP&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1ko8Qj-AlyVZ3q3zXlRn9zLoOK4tIdt1Y&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="A Journey Through History" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1z8WKda_0-ANF_qkVtys0q76YoRmAX79r&sz=s1800&quot;);
               "></div>
-
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Diamond Fields Heritage" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1J1exmCnNdKscJu4TU_oeNUflwmZtFuHP&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="3.3 Billion Years Of History" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1RlltiWd_rSbrJRaHoDq4Ja77_xXR0CRR&sz=s1800&quot;);
               "></div>
-
-
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Discover How Diamonds Form" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1zFZRfmwwcoakHhB76ab9acWY3ADrdN_F&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Step Into The Mine" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1N0HH1P4wDVOrrkT-9r8kA2tQtr5ukpXT&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=19TeGjKo9vpLgOMPuTh8b87xhNARBOnFk&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="Dress As Diamond Diggers" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1JAJzyNFKp88H-zABJP-eT9YHJyUD8qoc&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
+          <div class="popup-slide" data-caption="A Playful Discovery" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=12xmkUwtYSKOhKBrO7YYOZmMhC4n34TEL&sz=s1800&quot;);
               "></div>
+          <div class="popup-slide" data-caption="From Rough To Brilliant" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1ko8Qj-AlyVZ3q3zXlRn9zLoOK4tIdt1Y&sz=s1800&quot;);
+              "></div>
+
+
+          <div class="popup-slide" data-caption="The Showroom Reveal" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=19TeGjKo9vpLgOMPuTh8b87xhNARBOnFk&sz=s1800&quot;);
+              "></div>
+
+
           <div class="popup-slide" style="
                 background: #000000;
                 display: flex;
@@ -3593,6 +3634,7 @@
                 text-align: center;
                 padding: 1.5rem;
               ">Cape Town Diamond Museum</div>
+          <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
               &lt;
@@ -3738,43 +3780,48 @@
       <div class="modal-section popup-gallery-section">
         <div class="popup-slide-gallery" data-popup-gallery="shopping"
           aria-label="Shimansky Shopping Experience image slideshow">
-
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=19sjh1Z-GtiEo5qIKRwVZhZkVQ_c4-TQK&sz=s1800&quot;);
+          <div class="popup-slide" data-caption="Welcome To The Boutique" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1NDcw2A-S1A1BVA3Ba4UjwQpyHrePWQCy&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide active" style="
+          <div class="popup-slide" data-caption="A Private Consultation" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1o9ncpt92sEuts6u-ETs2M0ZMkkx868qA&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Guided By A Jewellery Specialist" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1DZW189B5OtE8mhmcnvR7BZ775VNZOhaC&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Trying On The Perfect Ring" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1DZ3mFHZqEYI1B3ufq8i1CDJRzBZ1tC_S&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="A Closer Look At Diamonds" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1r06KdKMJfGDoIfutDJ0iq2aUH_o0OL45&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Exclusive Diamond Cuts" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1Ce6N5kZq_HtzfeOO8E18yQRAS7RiT85D&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide" data-caption="Ayanda, The Queen Of Tanzanite" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=1Zm0cMAJhJ-nhUaJTk0Z2aFf7YolhrkBW&sz=s1800&quot;);
+              "></div>
+          <div class="popup-slide active" data-caption="Iconic Jewellery Designs" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1oa8K7FdlM_6WjxIEQuy8s6tl0D9HzFvt&sz=s1800&quot;);
               "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1Zm0cMAJhJ-nhUaJTk0Z2aFf7YolhrkBW&sz=s1800&quot;);
+          <div class="popup-slide" data-caption="Styled To Perfection" style="
+                background-image: url(&quot;https://drive.google.com/thumbnail?id=19sjh1Z-GtiEo5qIKRwVZhZkVQ_c4-TQK&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1Ce6N5kZq_HtzfeOO8E18yQRAS7RiT85D&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" style="
+
+          <div class="popup-slide" data-caption="A Piece Of Shimansky To Take Home" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=16yNKtPZILv-N-Tg_YlVrn00Yl2C1GHoy&sz=s1800&quot;);
               "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1o9ncpt92sEuts6u-ETs2M0ZMkkx868qA&sz=s1800&quot;);
-              "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1DZ3mFHZqEYI1B3ufq8i1CDJRzBZ1tC_S&sz=s1800&quot;);
-              "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1r06KdKMJfGDoIfutDJ0iq2aUH_o0OL45&sz=s1800&quot;);
-              "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1DZW189B5OtE8mhmcnvR7BZ775VNZOhaC&sz=s1800&quot;);
-              "></div>
 
-          <div class="popup-slide" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1NDcw2A-S1A1BVA3Ba4UjwQpyHrePWQCy&sz=s1800&quot;);
-              "></div>
+
+
+
+
+
           <div class="popup-slide" data-delay="7000" style="
                 background: #000000;
                 display: flex;
@@ -3788,6 +3835,7 @@
                 text-align: center;
                 padding: 1.5rem;
               ">Shimansky Shopping Experience</div>
+          <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
               &lt;
@@ -4447,6 +4495,7 @@
       const dotsWrap = gallery.querySelector(".popup-gallery-dots");
       const prevBtn = gallery.querySelector(".popup-prev");
       const nextBtn = gallery.querySelector(".popup-next");
+      const caption = gallery.querySelector(".popup-slide-caption");
       let current = 0;
       let timer = null;
 
@@ -4461,6 +4510,15 @@
             .forEach((dot, i) => {
               dot.classList.toggle("active", i === current);
             });
+        }
+        if (caption) {
+          const text = slides[current].dataset.caption;
+          if (text) {
+            caption.textContent = text;
+            caption.classList.add("visible");
+          } else {
+            caption.classList.remove("visible");
+          }
         }
       }
 
