@@ -2837,6 +2837,17 @@
       opacity: 0;
       transition: opacity 320ms ease;
       pointer-events: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    .popup-slide-caption span {
+      background: rgba(10, 10, 10, 0.62);
+      border: 1px solid rgba(183, 155, 98, 0.3);
+      padding: 0.5rem 1rem;
+      border-radius: 3px;
+      backdrop-filter: blur(2px);
+      max-width: 100%;
     }
 
     .popup-slide-caption.visible {
@@ -3235,19 +3246,17 @@
       <div class="modal-section popup-gallery-section">
         <div class="popup-slide-gallery" data-popup-gallery="story"
           aria-label="The Shimansky Diamond Journey Story image slideshow">
-          <div class="popup-slide active" data-caption="Rough Diamond Selection" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1fIKi90an6wAhgRIqzFLY1BDxXwSoMe7Y&sz=s1800&quot;);
-              "></div>
-          <div class="popup-slide" data-caption="Expert Cutting & Polishing" style="
+
+          <div class="popup-slide" data-caption="Sourced from the earth" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1PvNcAK4h5Va8qfgUpRKiB-VcUW2sDr_X&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" data-caption="Master Craftsmanship" style="
+          <div class="popup-slide" data-caption="Rough diamonds, hand-selected" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1Osl_72SJOJJMZKH3KKAFvXoJC5rigXnR&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" data-caption="Setting the Stone" style="
+          <div class="popup-slide" data-caption="Cut and polished to brilliance" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1xYlwQ7BoAr2C4COJEtQr2ZQB87UWMG4_&sz=s1800&quot;);
               "></div>
-          <div class="popup-slide" data-caption="The Finished Piece" style="
+          <div class="popup-slide" data-caption="the final inspection" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1_UDrvL_wBT0PljYOl6828Egs2DGR_qvM&sz=s1800&quot;);
               "></div>
 
@@ -4442,6 +4451,9 @@
         modal.classList.add("open");
         document.body.style.overflow = "hidden";
         updateModalScrollHint(modal);
+        modal.querySelectorAll(".popup-slide-gallery").forEach((gallery) => {
+          if (typeof gallery._resetGallery === "function") gallery._resetGallery();
+        });
       });
     });
 
@@ -4514,7 +4526,10 @@
         if (caption) {
           const text = slides[current].dataset.caption;
           if (text) {
-            caption.textContent = text;
+            caption.innerHTML = "";
+            const span = document.createElement("span");
+            span.textContent = text;
+            caption.appendChild(span);
             caption.classList.add("visible");
           } else {
             caption.classList.remove("visible");
@@ -4563,6 +4578,11 @@
           restart();
         });
       restart();
+
+      gallery._resetGallery = function () {
+        show(0);
+        restart();
+      };
     });
 
 
