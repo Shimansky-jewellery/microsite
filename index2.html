@@ -1020,6 +1020,7 @@
       font-size: 1rem;
       pointer-events: none;
       opacity: 0;
+      z-index: 20;
       transition: opacity 240ms ease, transform 240ms ease;
       animation: modal-scroll-bounce 1.4s ease-in-out infinite;
     }
@@ -1060,6 +1061,7 @@
       cursor: pointer;
       opacity: 0;
       pointer-events: none;
+      z-index: 20;
       transition: opacity 240ms ease, transform 240ms ease, background 240ms ease, border-color 240ms ease;
       animation: modal-scroll-bounce-up 1.4s ease-in-out infinite;
     }
@@ -2508,6 +2510,22 @@
       }
     }
 
+    @media (max-width: 600px) {
+      .btn-row {
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+      }
+
+      .btn-row .read-more,
+      .btn-row .btn-g {
+        padding: 0.7rem 0.5rem;
+        font-size: 0.58rem;
+        letter-spacing: 0.09em;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+
     /* ================================
        CLIENT TYPOGRAPHY + GIVING BACK REFINEMENT END
        ================================ */
@@ -2856,7 +2874,7 @@
 
     @media (max-width: 768px) {
       .popup-slide-caption {
-        font-size: 0.44rem;
+        font-size: 0.64rem;
         bottom: 2.1rem;
       }
     }
@@ -2870,6 +2888,83 @@
       .popup-gallery-controls {
         left: 0.7rem;
         right: 0.7rem;
+      }
+    }
+
+    /* Stacked gallery layout: images listed neatly underneath each other */
+    .popup-slide-gallery.stacked-gallery {
+      position: static;
+      width: 100%;
+      height: auto;
+      min-height: 0;
+      overflow: visible;
+      background: none;
+      border: none;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      margin: 0.4rem 0 1.15rem;
+    }
+
+    .popup-slide-gallery.stacked-gallery::after {
+      content: none;
+    }
+
+    .popup-slide-gallery.stacked-gallery .popup-slide {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 300px;
+      opacity: 1 !important;
+      transition: none;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(183, 155, 98, 0.24);
+      box-shadow: 0 16px 34px rgba(20, 20, 20, 0.16);
+    }
+
+    .popup-slide-gallery.stacked-gallery .popup-slide[data-caption]::after {
+      content: attr(data-caption);
+      position: absolute;
+      left: 50%;
+      bottom: 0.85rem;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: var(--ivory);
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 500;
+      background: rgba(10, 10, 10, 0.62);
+      border: 1px solid rgba(183, 155, 98, 0.32);
+      padding: 0.5rem 1.1rem;
+      border-radius: 3px;
+      backdrop-filter: blur(2px);
+      white-space: nowrap;
+    }
+
+    .popup-slide-gallery.stacked-gallery .popup-gallery-controls,
+    .popup-slide-gallery.stacked-gallery .popup-gallery-dots,
+    .popup-slide-gallery.stacked-gallery .popup-slide-caption {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .popup-slide-gallery.stacked-gallery {
+        gap: 0.85rem;
+      }
+
+      .popup-slide-gallery.stacked-gallery .popup-slide {
+        height: 220px;
+      }
+
+      .popup-slide-gallery.stacked-gallery .popup-slide[data-caption]::after {
+        font-size: 0.46rem;
+        padding: 0.4rem 0.85rem;
+        white-space: normal;
+        max-width: 88%;
+        text-align: center;
       }
     }
 
@@ -3025,11 +3120,6 @@
         transform-origin: top center;
         width: 111.12% !important;
         margin-left: -5.56% !important;
-      }
-
-      .popup-gallery-btn {
-        width: 30px;
-        height: 30px;
       }
     }
 
@@ -3249,7 +3339,7 @@
       </h2>
 
       <div class="modal-section popup-gallery-section">
-        <div class="popup-slide-gallery" data-popup-gallery="story"
+        <div class="popup-slide-gallery stacked-gallery" data-popup-gallery="story"
           aria-label="The Shimansky Diamond Journey Story image slideshow">
 
           <div class="popup-slide" data-caption="Sourced from the earth" style="
@@ -3367,7 +3457,7 @@
       </h2>
 
       <div class="modal-section popup-gallery-section">
-        <div class="popup-slide-gallery" data-popup-gallery="rockwell"
+        <div class="popup-slide-gallery stacked-gallery" data-popup-gallery="rockwell"
           aria-label="Rockwell Diamond Experience image slideshow">
           <div class="popup-slide" data-caption="Welcome To The Rockwell" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=11maL8eopxoDrPDFrcReiGrXgXClGI5b6&sz=s1800&quot;);
@@ -3599,7 +3689,7 @@
       <h2 class="modal-title">Cape Town<br /><em>Diamond Museum</em></h2>
 
       <div class="modal-section popup-gallery-section">
-        <div class="popup-slide-gallery" data-popup-gallery="museum"
+        <div class="popup-slide-gallery stacked-gallery" data-popup-gallery="museum"
           aria-label="Cape Town Diamond Museum image slideshow">
           <div class="popup-slide active" data-caption="Welcome To The Museum" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1CKW3pM8K5302yQkCdLIcDBKWEzonAPzv&sz=s1800&quot;);
@@ -3792,7 +3882,7 @@
       <h2 class="modal-title">Shimansky<br /><em>Shopping Experience</em></h2>
 
       <div class="modal-section popup-gallery-section">
-        <div class="popup-slide-gallery" data-popup-gallery="shopping"
+        <div class="popup-slide-gallery stacked-gallery" data-popup-gallery="shopping"
           aria-label="Shimansky Shopping Experience image slideshow">
           <div class="popup-slide" data-caption="Welcome To The Boutique" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1NDcw2A-S1A1BVA3Ba4UjwQpyHrePWQCy&sz=s1800&quot;);
@@ -4508,6 +4598,10 @@
 
     // Popup image slideshow galleries
     document.querySelectorAll(".popup-slide-gallery").forEach((gallery) => {
+      if (gallery.classList.contains("stacked-gallery")) {
+        gallery._resetGallery = function () { };
+        return;
+      }
       const slides = gallery.querySelectorAll(".popup-slide");
       const dotsWrap = gallery.querySelector(".popup-gallery-dots");
       const prevBtn = gallery.querySelector(".popup-prev");
