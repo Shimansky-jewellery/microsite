@@ -3187,6 +3187,107 @@
 </head>
 
 <body>
+  <div id="sitePasswordGate" style="
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #0c0c0c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+      ">
+    <form id="sitePasswordForm" style="
+          width: 100%;
+          max-width: 360px;
+          text-align: center;
+          font-family: 'Helvetica', Arial, sans-serif;
+        ">
+      <div style="
+            color: #f8f6f1;
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 1.6rem;
+          ">
+        Shimansky · The Diamond Experience
+      </div>
+      <div style="
+            color: rgba(248, 246, 241, 0.65);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.4rem;
+          ">
+        Please enter the password to continue.
+      </div>
+      <input type="password" id="sitePasswordInput" placeholder="Password" autocomplete="off" style="
+            width: 100%;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(183, 155, 98, 0.45);
+            color: #f8f6f1;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+            text-align: center;
+            border-radius: 3px;
+            margin-bottom: 0.9rem;
+          " />
+      <button type="submit" style="
+            width: 100%;
+            background: transparent;
+            border: 1px solid rgba(183, 155, 98, 0.7);
+            color: #f8f6f1;
+            padding: 0.8rem 1rem;
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 200ms ease, color 200ms ease;
+          " onmouseover="this.style.background='#b79b62'; this.style.color='#0c0c0c';"
+        onmouseout="this.style.background='transparent'; this.style.color='#f8f6f1';">
+        Enter
+      </button>
+      <div id="sitePasswordError" style="
+            color: #d98c8c;
+            font-size: 0.68rem;
+            letter-spacing: 0.05em;
+            margin-top: 0.9rem;
+            display: none;
+          ">
+        Incorrect password. Please try again.
+      </div>
+    </form>
+  </div>
+  <script>
+    (function () {
+      var SITE_PASSWORD = "shimansky2026";
+      var gate = document.getElementById("sitePasswordGate");
+      var form = document.getElementById("sitePasswordForm");
+      var input = document.getElementById("sitePasswordInput");
+      var error = document.getElementById("sitePasswordError");
+
+      if (sessionStorage.getItem("shimansky_site_unlocked") === "yes") {
+        gate.style.display = "none";
+      } else {
+        document.body.style.overflow = "hidden";
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (input.value === SITE_PASSWORD) {
+          sessionStorage.setItem("shimansky_site_unlocked", "yes");
+          gate.style.display = "none";
+          document.body.style.overflow = "";
+        } else {
+          error.style.display = "block";
+          input.value = "";
+          input.focus();
+        }
+      });
+    })();
+  </script>
   <nav>
     <div class="nav-logo">Shimansky · The Diamond Experience</div>
     <div class="nav-right">
