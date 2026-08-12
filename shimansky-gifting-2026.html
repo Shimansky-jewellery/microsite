@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shimansky Gifting 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Poppins:ital,wght@0,300;0,400;0,500;0,600&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --ivory: #f8f6f1;
+      --ivory2: #f1ede4;
+      --warm-sand: #d9d2c3;
+      --soft-gold: #b79b62;
+      --gold-light: #d4bc8e;
+      --charcoal: #1e1e1e;
+      --charcoal2: #161616;
+      --charcoal3: #262624;
+      --sage: #b7b7a4;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y proximity;
+    }
+
+    html,
+    body {
+      width: 1600px;
+      max-width: 100%;
+      margin: 0 auto;
+      background: var(--charcoal);
+      font-family: 'Poppins', 'Helvetica', Arial, sans-serif;
+      color: var(--ivory);
+    }
+
+    .page {
+      width: 1600px;
+      max-width: 100%;
+      height: 900px;
+      position: relative;
+      overflow: hidden;
+      scroll-snap-align: start;
+    }
+
+    .bg-charcoal {
+      background: var(--charcoal);
+      color: var(--ivory);
+    }
+
+    .bg-charcoal2 {
+      background: var(--charcoal2);
+      color: var(--ivory);
+    }
+
+    .bg-ivory {
+      background: var(--ivory);
+      color: var(--charcoal);
+    }
+
+    /* ---------- wordmark / display type ---------- */
+    .wordmark {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    .display {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .eyebrow.on-dark {
+      color: var(--soft-gold);
+    }
+
+    .eyebrow.on-light {
+      color: var(--soft-gold);
+    }
+
+    .hairline {
+      width: 46px;
+      height: 1px;
+      background: var(--soft-gold);
+    }
+
+    .monogram {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 34px;
+      letter-spacing: 1px;
+    }
+
+    .body-copy {
+      font-size: 15px;
+      line-height: 2;
+      font-weight: 300;
+    }
+
+    .on-dark-body {
+      color: var(--warm-sand);
+    }
+
+    .on-light-body {
+      color: #55524c;
+    }
+
+    .caption {
+      font-size: 10.5px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .pagefoot {
+      position: absolute;
+      bottom: 42px;
+      left: 90px;
+      right: 90px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    /* ---------- SPREAD (two-panel) layout ---------- */
+    .spread {
+      position: absolute;
+      inset: 0;
+      display: flex;
+    }
+
+    .panel {
+      width: 50%;
+      height: 900px;
+      position: relative;
+    }
+
+    .panel-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 100px;
+    }
+
+    .panel-mat {
+      background: var(--ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px;
+    }
+
+    .panel-mat .frame {
+      width: 100%;
+
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .frame::after {
+
+      font-family: 'Poppins', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: rgba(183, 155, 98, 0.7);
+    }
+
+    .panel-mat.on-dark-mat {
+      background: var(--charcoal3);
+    }
+
+    .panel-text .eyebrow {
+      margin-bottom: 22px;
+    }
+
+    .panel-text h1 {
+      font-size: 42px;
+      line-height: 1.18;
+      margin-bottom: 22px;
+    }
+
+    .panel-text .meta {
+      font-style: italic;
+      font-size: 14px;
+      color: var(--soft-gold);
+      margin-bottom: 24px;
+    }
+
+    .panel-text .hairline {
+      margin-bottom: 24px;
+    }
+
+    .panel-text .price {
+      margin-top: 30px;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      color: var(--soft-gold);
+    }
+
+    /* ---------- CENTERED intro layout ---------- */
+    .centered {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 0 260px;
+    }
+
+    .centered.no-photos {
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .centered .eyebrow {
+      margin-bottom: 26px;
+    }
+
+    .centered h1 {
+      font-size: 46px;
+      margin-bottom: 26px;
+    }
+
+    .centered .hairline {
+      margin: 0 auto 30px;
+    }
+
+    .centered .body-copy {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .trio-mats {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      bottom: 120px;
+      display: flex;
+      gap: 26px;
+      height: 260px;
+    }
+
+    .fine-print {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      bottom: 78px;
+      text-align: center;
+      font-size: 11px;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .fine-print.on-light {
+      color: #837d70;
+    }
+
+    .fine-print.on-dark {
+      color: var(--warm-sand);
+    }
+
+    .price-note {
+      position: absolute;
+      left: 90px;
+      right: 90px;
+      bottom: 78px;
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      font-weight: 500;
+      color: var(--soft-gold);
+    }
+
+    .trio-mats .frame {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------- Embossed watermark page ---------- */
+    .emboss-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .emboss-text {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-weight: 500;
+      font-size: 132px;
+      letter-spacing: 4px;
+      color: var(--charcoal);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.55), -1px -1px 1px rgba(255, 255, 255, 0.045);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .emboss-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 190px;
+      text-align: center;
+    }
+
+    .emboss-caption .caption {
+      color: var(--soft-gold);
+      margin-bottom: 16px;
+    }
+
+    .emboss-caption .body-copy {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Embossed cover (light) ---------- */
+    .cover-emboss {
+      position: absolute;
+      inset: 0;
+      background-color: var(--ivory);
+      background-image:
+        radial-gradient(ellipse 620px 420px at 68% 12%, rgba(30, 30, 30, 0.06), transparent 70%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    .cover-emboss-word {
+      position: absolute;
+      left: 50%;
+      top: 340px;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-weight: 500;
+      font-size: 233px;
+      letter-spacing: 6px;
+      color: var(--ivory);
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.16), -1px -1px 1px rgba(255, 255, 255, 0.9);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .cover-emboss-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 545px;
+      text-align: center;
+    }
+
+    .cover-emboss-caption .caption {
+      color: var(--soft-gold);
+      margin-bottom: 14px;
+      letter-spacing: 5px;
+    }
+
+    .cover-emboss-caption .sub {
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, serif;
+      font-style: italic;
+      color: #6b6559;
+      font-size: 15px;
+    }
+
+
+    /* ---------- cover ---------- */
+    .cover-text-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 90px;
+    }
+
+    .cover-text-panel .eyebrow {
+      margin-bottom: 30px;
+    }
+
+    .cover-text-panel h1 {
+      font-size: 58px;
+      line-height: 1.12;
+    }
+
+    .cover-text-panel .year {
+      display: block;
+      font-style: italic;
+      color: var(--soft-gold);
+      font-size: 30px;
+      margin-top: 14px;
+    }
+
+    .cover-text-panel .tagline {
+      margin-top: 32px;
+      font-size: 14px;
+      color: var(--warm-sand);
+      font-style: italic;
+      max-width: 320px;
+    }
+
+    /* ---------- Contents ---------- */
+    .toc {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .toc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(30, 30, 30, 0.12);
+      font-family: 'Cormorant Garamond', 'Lora', Georgia, 'DejaVu Serif', serif;
+      font-size: 19px;
+    }
+
+    .toc-row span:first-child {
+      flex: 1;
+    }
+
+    .toc-row span:last-child {
+      color: var(--soft-gold);
+      font-style: italic;
+      white-space: nowrap;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-rows {
+      margin-top: 6px;
+    }
+
+    .contact-rows .name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+
+    .contact-rows .role {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--soft-gold);
+      margin-bottom: 26px;
+    }
+
+    .contact-rows .line {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #55524c;
+      font-weight: 300;
+    }
+
+    .contact-rows .divider {
+      width: 260px;
+      height: 1px;
+      background: rgba(183, 155, 98, 0.4);
+      margin: 22px 0;
+    }
+
+    /* ==========================================================
+       MOBILE / PHONE VIEW
+       ========================================================== */
+    @media (max-width: 768px) {
+
+      html {
+        scroll-snap-type: none;
+      }
+
+      html,
+      body {
+        width: 100%;
+      }
+
+      .page {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+      }
+
+      /* ---- spreads stack vertically ---- */
+      .spread {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        inset: auto;
+      }
+
+      .panel {
+        width: 100%;
+        height: auto;
+        position: static;
+      }
+
+      .panel-text {
+        padding: 56px 28px 40px;
+        justify-content: flex-start;
+      }
+
+      .panel-text h1 {
+        font-size: 28px;
+        line-height: 1.25;
+        margin-bottom: 16px;
+      }
+
+      .panel-text .meta {
+        font-size: 12px;
+        margin-bottom: 16px;
+      }
+
+      .panel-text .price {
+        font-size: 12px;
+        margin-top: 22px;
+      }
+
+      .panel-text .eyebrow {
+        margin-bottom: 14px;
+      }
+
+      .body-copy {
+        font-size: 14px;
+        line-height: 1.85;
+      }
+
+      .panel-mat {
+        padding: 28px;
+      }
+
+      .panel-mat .frame {
+        height: 320px;
+      }
+
+      /* ---- centered intro pages ---- */
+      .centered {
+        position: static;
+        padding: 64px 28px 24px;
+      }
+
+      .centered h1 {
+        font-size: 30px;
+      }
+
+      .centered .body-copy {
+        max-width: 100%;
+      }
+
+      /* ---- trio image rows stack ---- */
+      .trio-mats {
+        position: static;
+        flex-direction: column;
+        height: auto !important;
+        gap: 14px;
+        padding: 0 28px 24px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+      }
+
+      .trio-mats .frame {
+        flex: 0 0 200px;
+        width: 100%;
+        height: 200px;
+      }
+
+      .fine-print,
+      .price-note {
+        position: static;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        padding: 20px 28px 0;
+      }
+
+      .pagefoot {
+        position: static;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        padding: 30px 28px 36px;
+      }
+
+      /* ---- contents ---- */
+      .toc {
+        max-width: 100%;
+      }
+
+      .toc-row {
+        font-size: 16px;
+      }
+
+      /* ---- contact ---- */
+      .contact-rows .divider {
+        width: 100%;
+      }
+
+      /* ---- embossed Southern Cross page ---- */
+      .emboss-wrap {
+        position: static;
+        height: 260px;
+      }
+
+      .emboss-text {
+        font-size: 44px;
+        letter-spacing: 1px;
+      }
+
+      .emboss-caption {
+        position: static;
+        padding: 24px 28px 40px;
+      }
+
+      .emboss-caption .body-copy {
+        max-width: 100%;
+      }
+
+      /* ---- embossed cover ---- */
+      .cover-emboss {
+        position: absolute;
+        inset: 0;
+      }
+
+      .cover-emboss-word {
+        top: 46%;
+        font-size: 84px;
+        letter-spacing: 3px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .cover-emboss-caption {
+        top: auto;
+        bottom: 130px;
+      }
+
+      .cover-emboss-caption .sub {
+        font-size: 13px;
+      }
+
+      /* ---- spread cover (unused variant, kept safe) ---- */
+      .cover-text-panel {
+        padding: 56px 28px 32px;
+      }
+
+      .cover-text-panel h1 {
+        font-size: 36px;
+      }
+
+      .cover-text-panel .year {
+        font-size: 22px;
+      }
+
+      .cover-text-panel .tagline {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .cover-emboss-word {
+        font-size: 62px;
+      }
+
+      .panel-mat .frame {
+        height: 260px;
+      }
+
+      .panel-text h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ PAGE 1 — COVER (embossed wordmark) ============ -->
+  <div class="page bg-ivory">
+    <div class="cover-emboss"></div>
+    <div class="cover-emboss-word">SHIMANSKY</div>
+    <div class="cover-emboss-caption">
+      <div class="caption">Gifting</div>
+      <div class="caption" style="color:var(--charcoal); margin-bottom:22px;">2026</div>
+      <div class="sub">Cape Town &middot; New York</div>
+    </div>
+    <div class="pagefoot" style="color:#a39d8e;">
+      <span>SHIMANSKY</span><span>01</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 2 — CONTENTS ============ -->
+  <div class="page bg-ivory">
+    <div class="centered" style="padding-top:40px;">
+      <div class="monogram" style="margin-bottom:18px; color:var(--charcoal);">S</div>
+      <span class="eyebrow on-light">Inside This Guide</span>
+      <h1 class="display" style="margin-top:20px; font-size:40px;">Contents</h1>
+      <div class="hairline" style="margin:24px auto 40px;"></div>
+      <div class="toc">
+        <div class="toc-row"><span>Our Story</span><span>03</span></div>
+        <div class="toc-row"><span>My Africa &amp; Shimansky Pins</span><span>05</span></div>
+        <div class="toc-row"><span>The Shimansky Foundation</span><span>06</span></div>
+        <div class="toc-row"><span>My Africa Bracelets</span><span>07</span></div>
+        <div class="toc-row"><span>Tanzanite Collection</span><span>10</span></div>
+        <div class="toc-row"><span>Dancing Tanzanite Pendant</span><span>11</span></div>
+        <div class="toc-row"><span>Tanzanite Solitaire Pendant</span><span>12</span></div>
+        <div class="toc-row"><span>Southern Cross Collection</span><span>13</span></div>
+        <div class="toc-row"><span>Contact Us</span><span>15</span></div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:#a39d8e;">
+      <span>SHIMANSKY</span><span>02</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 3 — OUR STORY (spread) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">Our Brand</span>
+        <h1 class="display">Our Story</h1>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          Founded in South Africa, a country rich in diamonds, gold and
+          platinum, Shimansky is a leading premium jewellery brand sought
+          after for iconic designs and expert craftsmanship. Our involvement
+          in every step of a diamond's journey, from mine to finger, ensures
+          that only the finest diamonds are selected and polished in-house.
+        </p>
+        <br />
+        <p class="body-copy on-dark-body">
+          Over the past 25 years, we have pioneered the use of platinum in
+          South African jewellery and created copyright protected designs,
+          marking our customers' special moments with a unique Shimansky
+          creation.
+        </p>
+      </div>
+      <div class="panel panel-mat">
+
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1uCKLPQsMqfFwcBmoIgDTZLUlmJE23YbZ&sz=s1800"
+            alt="Shimansky Our Story" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>03</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 4 — MY AFRICA INTRO (centered, typographic) ============ -->
+  <div class="page bg-ivory">
+    <div class="centered">
+      <div class="display" style="font-style:italic; font-size:56px; color:var(--charcoal);">My Africa</div>
+      <div class="hairline" style="margin:26px auto 30px;"></div>
+      <p class="body-copy on-light-body">
+        Wear the spirit of Africa wherever you go with our My Africa
+        Collection &mdash; designed and expertly crafted with our signature
+        craftsmanship in mind, as a wearable keepsake. Style them together
+        for a layered look, or add them to gifts for your loved ones.
+      </p>
+    </div>
+    <div class="trio-mats">
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1ZIQu7lx-i8VAfCfbuy1c7iUxwNsXxjmz&sz=s1800" alt="My Africa"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1eRxyr2-UTThjkWlzlvNcBmpvoSFIUhmZ&sz=s1800" alt="My Africa"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1WXZmu71WQX5eSosmSOGVAh2pYsQWSv0j&sz=s1800" alt="My Africa"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </div>
+    <p class="fine-print on-light">
+      *All Shimansky adjustable cord bracelets are available in either silver with 14k yellow gold plating or plain
+      sliver in black, brown, red and pink cord.
+    </p>
+    <div class="pagefoot" style="color:#a39d8e;">
+      <span>SHIMANSKY</span><span>04</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 5 — PINS (centered on dark) ============ -->
+  <div class="page bg-charcoal2">
+    <div class="centered">
+      <span class="eyebrow on-dark">A Precious Creation</span>
+      <h1 class="display" style="margin-top:20px;">My Africa &amp; Shimansky Pins</h1>
+      <div class="hairline" style="margin:26px auto 30px;"></div>
+      <p class="body-copy on-dark-body">
+        Africa is known for its rich and diverse culture, its extraordinary
+        natural wonders, and for the incredible gifts found deep inside the
+        earth &mdash; gold and precious diamonds. Discover the Tip of Africa
+        Pin by Shimansky, a precious creation that harnesses the power and
+        presence of the African continent.
+      </p>
+    </div>
+    <div class="trio-mats" style="height:220px;">
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1jCjVNEdfMj9_29AJc1seyIbvqBVoq9yG&sz=s1800" alt="My Africa Pin"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1D4f20sx7y7db-p2AqVlHShr_PWcnjDr1&sz=s1800" alt="My Africa Pin"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+        <img src="https://drive.google.com/thumbnail?id=1ykKb1KN-VcInGqG4GvJpnBpKTtndk3C9&sz=s1800" alt="My Africa Pin"
+          style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </div>
+    <div class="price-note">Silver R700 &nbsp;|&nbsp; Gold R800</div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>05</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 6 — GIVING BACK (spread) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">The Shimansky Foundation</span>
+        <h1 class="display">Giving Back</h1>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          The Shimansky Diamond Foundation is a non-profit organisation
+          supporting local causes, mainly focused on providing food and
+          education to women and children in need. We channel any donation
+          without administrative fees &mdash; 100% of the funds are used for
+          the purpose they are intended for.
+        </p>
+        <br />
+        <p class="body-copy on-dark-body">
+          Purchase our My Africa, My Shimansky bracelets to support our
+          initiatives &mdash; all proceeds go directly to the Foundation.
+        </p>
+      </div>
+      <div class="panel panel-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+          <img src="https://drive.google.com/thumbnail?id=16aiYSxqmYcleDbzat18UtgY4SVKqZiq-&sz=s1800" alt="Giving Back"
+            style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>06</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 7 — CAPE TOWN BRACELET (spread, photo left) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-mat">
+
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1MvnDVDmFYHXkjfd9NneVHadkhsZH0vHz&sz=s1800"
+            alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">My Africa Collection</span>
+        <h1 class="display">Cape Town Adjustable Cord Bracelet</h1>
+        <div class="meta">Silver, 14k Gold Plating or Silver</div>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          Like no other city in the world, Cape Town, with its iconic Table
+          Mountain and deep blue oceans, carries a signature vibe felt from
+          the moment you arrive. Treasure your memories wherever you go with
+          this bracelet, expertly crafted in silver and 14k gold plating.
+        </p>
+        <div class="price">R500 &nbsp;&middot;&nbsp; WSP R300 EX VAT</div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>07</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 8 — ELEPHANT BRACELET (spread, photo right) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">My Africa Collection</span>
+        <h1 class="display">Elephant Adjustable Cord Bracelet</h1>
+        <div class="meta">Silver, 14k Gold Plating or Silver</div>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          Embrace the beauty and wisdom of the elephant with this elegant
+          bracelet, featuring a finely crafted silhouette in silver with 14k
+          gold plating &mdash; blending durability with a touch of luxury, and
+          a meaningful accent representing strength, loyalty and grace.
+        </p>
+        <div class="price">R500 &nbsp;&middot;&nbsp; WSP R300 EX VAT</div>
+      </div>
+      <div class="panel panel-mat">
+
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1LOoEkKwnjmPHdhz4_AcdaSGGVVOsfB9L&sz=s1800"
+            alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>08</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 9 — MY AFRICA BRACELET (spread, photo left) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1iFLiqIkxbES83LHTT_NVgtfCalgXfrdP&sz=s1800"
+            alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">My Africa Collection</span>
+        <h1 class="display">My Africa Adjustable Cord Bracelet</h1>
+        <div class="meta">Silver, 14k Gold Plating or Silver</div>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          Take a piece of Africa with you wherever you go, featuring a
+          silhouette of the continent. Symbolising unity, heritage and pride,
+          this bracelet combines style with meaning &mdash; wear it to show
+          your appreciation for Africa's vibrant heritage and enduring spirit.
+        </p>
+        <div class="price">R500 &nbsp;&middot;&nbsp; WSP R300 EX VAT</div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>09</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 10 — TANZANITE COLLECTION (centered on dark) ============ -->
+  <div class="page bg-charcoal2">
+    <div class="centered">
+      <span class="eyebrow on-dark">Sourced From The Masai</span>
+      <h1 class="display" style="margin-top:20px;">Tanzanite Collection</h1>
+      <div class="hairline" style="margin:26px auto 30px;"></div>
+      <p class="body-copy on-dark-body">
+        For nearly two decades, Shimansky has sourced the finest quality
+        tanzanite directly from the Masai tribe. All tanzanite is certified in
+        accordance with the Tanzanite International Grading Standard,
+        guaranteeing the best quality tanzanite in the world.
+      </p>
+    </div>
+    <div class="trio-mats" style="height:240px;">
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1kHgnCYXqa6cAplRNY0dkMkLEj_SdHma_&sz=s1800"
+          alt="Tanzanite Collection" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=15hIZfpsA49_fN7Qf8xzRE0eMXE8ims_R&sz=s1800"
+          alt="Tanzanite Collection" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+      <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+        <img src="https://drive.google.com/thumbnail?id=1vybMQZo7xwCjUrGJvfTxNwBFDv14S-IA&sz=s1800"
+          alt="Tanzanite Collection" style="width:100%; height:100%; object-fit:cover;" />
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>10</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 11 — DANCING TANZANITE PENDANT (spread, photo left) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1V1AMM-Cc1LU4jTD-BWQEn6iMrSkY9D60&sz=s1800"
+            alt="Dancing Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">Tanzanite Collection</span>
+        <h1 class="display">Dancing Tanzanite Pendant</h1>
+        <div class="meta">Round Tanzanite &middot; Wishbone &middot; Silver</div>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          This Dancing Tanzanite wishbone pendant has been expertly crafted to
+          allow the tanzanite to move, capturing the light with every
+          heartbeat and dancing freely with a 5.00mm round, lustrous
+          tanzanite, &plusmn; 0.53 carat.
+        </p>
+        <div class="price">4.0MM SILVER: R2000 WSP<br />5.0MM SILVER: R3500 WSP</div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>11</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 12 — TANZANITE SOLITAIRE PENDANT (spread, photo right) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">Tanzanite Collection</span>
+        <h1 class="display">Tanzanite Solitaire Pendant</h1>
+        <div class="meta">Round Tanzanite &middot; Silver</div>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          Elevate your everyday style with this timeless solitaire pendant.
+          The round-cut tanzanite captivates with its rich, vibrant hue &mdash;
+          designed for those who appreciate rare, high-quality gemstones and
+          seek a piece that exudes luxury, refinement and timeless beauty.
+        </p>
+        <div class="price">ROUND TANZANITE SILVER: R1500 WSP</div>
+      </div>
+      <div class="panel panel-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+          <img src="https://drive.google.com/thumbnail?id=1gtnh6Gd2T80kSk-T46BVzFUr8AMfHxMk&sz=s1800"
+            alt="Tanzanite Solitaire Pendant" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>12</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 13 — SOUTHERN CROSS COLLECTION (embossed signature page) ============ -->
+  <div class="page bg-charcoal2">
+    <div class="emboss-wrap">
+      <div class="emboss-text">SOUTHERN&nbsp;CROSS</div>
+    </div>
+    <div class="emboss-caption">
+      <div class="caption">Older Than The Stars</div>
+      <p class="body-copy on-dark-body">
+        Containing diamonds older than the constellation they represent, the
+        wonder of this shining star formation is perfectly captured in the
+        Southern Cross Collection &mdash; finest white, yellow or rose gold,
+        hand-selected Ayanda tanzanite, and round brilliant-cut diamonds, all
+        ethically mined and hand-crafted in South Africa.
+      </p>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>13</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 14 — SOUTHERN CROSS TANZANITE PENDANT (spread, photo left) ============ -->
+  <div class="page bg-charcoal">
+    <div class="spread">
+      <div class="panel panel-mat on-dark-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+
+          <img src="https://drive.google.com/thumbnail?id=1k-1w6yXtFsXY43P5FaeYCas2QILwXizM&sz=s1800"
+            alt="Southern Cross Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+      <div class="panel panel-text">
+        <span class="eyebrow on-dark">Southern Cross Collection</span>
+        <h1 class="display">Southern Cross Tanzanite Pendant</h1>
+        <div class="hairline"></div>
+        <p class="body-copy on-dark-body">
+          South of the equator, the night skies are illuminated by some of the
+          brightest stars in the galaxy: the Southern Cross. Containing
+          diamonds older than the constellation they represent, this shining
+          star formation is exclusive to Shimansky.
+        </p>
+        <div class="price">R1500 WSP</div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:var(--warm-sand);">
+      <span>SHIMANSKY</span><span>14</span>
+    </div>
+  </div>
+
+  <!-- ============ PAGE 15 — CONTACT US ============ -->
+  <div class="page bg-ivory">
+    <div class="spread">
+      <div class="panel panel-text" style="padding-left:100px;">
+        <div class="monogram" style="margin-bottom:22px; color:var(--charcoal);">S</div>
+        <span class="eyebrow on-light">Get In Touch</span>
+        <h1 class="display" style="color:var(--charcoal); margin-top:18px;">Contact Us</h1>
+        <div class="hairline"></div>
+        <div class="contact-rows">
+          <div class="name" style="color:var(--charcoal);">Kelly Ann Low</div>
+          <div class="role">Inbound Marketing Director</div>
+          <div class="line">+27 (79) 274 3530</div>
+          <div class="line">tours@shimansky.com</div>
+          <div class="divider"></div>
+          <div class="line">+27 (71) 302 1070</div>
+          <div class="line">kelly@shimansky.com</div>
+        </div>
+      </div>
+      <div class="panel panel-mat">
+        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <img src="https://drive.google.com/thumbnail?id=1AAdgTtoQqeGrZPTjJMktkElQbLQ89yr4&sz=s1800" alt="Contact Us"
+            style="width:100%; height:100%; object-fit:cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="pagefoot" style="color:#a39d8e;">
+      <span>SHIMANSKY</span><span>15</span>
+    </div>
+  </div>
+
+</body>
+
+</html>
