@@ -2779,6 +2779,13 @@
       transition: opacity 1s ease;
     }
 
+    .popup-slide-gallery .popup-slide video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     .popup-slide-gallery .popup-slide.active {
       opacity: 1;
     }
@@ -3427,6 +3434,15 @@
                 padding: 1.5rem;
               ">The Shimansky Diamond Journey
             Story</div>
+
+          <!-- VIDEO SLIDE — drop the real file in /videos/ and it will play automatically at the end of the gallery -->
+          <div class="popup-slide" data-caption="Watch The Diamond Journey">
+            <video muted playsinline preload="none"
+              poster="https://drive.google.com/thumbnail?id=1O4D7RH2FfVL3hO-FIv_Px7RqWDgFERnf&sz=s1800">
+              <source src="./videos/mine_to_finger_mobile-view2.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
               &lt;
@@ -3629,6 +3645,15 @@
                 text-align: center;
                 padding: 1.5rem;
               ">The Rockwell Diamond Experience</div>
+
+          <!-- VIDEO SLIDE — drop the real file in /videos/ and it will play automatically at the end of the gallery -->
+          <div class="popup-slide" data-caption="Watch The Rockwell Experience">
+            <video muted playsinline preload="none"
+              poster="https://drive.google.com/thumbnail?id=1XjihRrC7PLtV7x6t6F0E9V9coupwWeKu&sz=s1800">
+              <source src="./videos/rockwell_experience.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
@@ -3859,6 +3884,15 @@
                 text-align: center;
                 padding: 1.5rem;
               ">Cape Town Diamond Museum</div>
+
+          <!-- VIDEO SLIDE — drop the real file in /videos/ and it will play automatically at the end of the gallery -->
+          <div class="popup-slide" data-caption="Watch The Museum Experience">
+            <video muted playsinline preload="none"
+              poster="https://drive.google.com/thumbnail?id=1nARnhQg0DvvM5OF1ZzuyAz0cOONIoeTJ&sz=s1800">
+              <source src="./videos/ctdm_experience.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
@@ -4060,6 +4094,15 @@
                 text-align: center;
                 padding: 1.5rem;
               ">Shimansky Shopping Experience</div>
+
+          <!-- VIDEO SLIDE — drop the real file in /videos/ and it will play automatically at the end of the gallery -->
+          <div class="popup-slide" data-caption="WatchThe Shopping Experience">
+            <video muted playsinline preload="none"
+              poster="https://drive.google.com/thumbnail?id=1xZ-VpYoeiDxFMLdQhMSBBWSbYkJSy54U&sz=s1800">
+              <source src="./videos/shopping_experience.mp4" type="video/mp4" />
+            </video>
+          </div>
+
           <div class="popup-slide-caption"></div>
           <div class="popup-gallery-controls">
             <button class="popup-gallery-btn popup-prev" type="button" aria-label="Previous image">
@@ -4736,9 +4779,20 @@
 
       function show(index) {
         if (!slides.length) return;
-        slides[current].classList.remove("active");
+        const prevSlide = slides[current];
+        const prevVideo = prevSlide && prevSlide.querySelector("video");
+        if (prevVideo) {
+          prevVideo.pause();
+          prevVideo.currentTime = 0;
+        }
+        prevSlide.classList.remove("active");
         current = ((index % slides.length) + slides.length) % slides.length;
         slides[current].classList.add("active");
+        const nextVideo = slides[current].querySelector("video");
+        if (nextVideo) {
+          nextVideo.currentTime = 0;
+          nextVideo.play().catch(() => { });
+        }
         if (dotsWrap) {
           dotsWrap
             .querySelectorAll(".popup-gallery-dot")
@@ -4768,7 +4822,17 @@
 
       function restart() {
         if (timer) clearTimeout(timer);
-        if (slides.length > 1) {
+        if (slides.length <= 1) return;
+        const activeVideo = slides[current].querySelector("video");
+        if (activeVideo) {
+          // Advance once the video finishes playing, instead of a fixed delay
+          const onEnded = () => {
+            activeVideo.removeEventListener("ended", onEnded);
+            show(current + 1);
+            restart();
+          };
+          activeVideo.addEventListener("ended", onEnded);
+        } else {
           timer = setTimeout(() => {
             show(current + 1);
             restart();
