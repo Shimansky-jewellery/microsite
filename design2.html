@@ -2838,6 +2838,71 @@
                 object-position: center 20%;
             }
         }
+
+        /* ================================
+       POPUP MODALS — sliding content blocks
+       ================================ */
+        .modal-slide-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .modal-slide-tab {
+            font-family: inherit;
+            font-size: 0.66rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.2rem;
+            border: 1px solid rgba(183, 155, 98, 0.4);
+            background: rgba(183, 155, 98, 0.06);
+            color: var(--gold-dark, var(--soft-gold));
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .modal-slide-tab:hover {
+            background: rgba(183, 155, 98, 0.16);
+        }
+
+        .modal-slide-tab.active {
+            background: var(--soft-gold);
+            color: var(--white, #fff);
+            border-color: var(--soft-gold);
+        }
+
+        .modal-slide-viewport {
+            position: relative;
+            overflow: hidden;
+            transition: height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-slide-track {
+            display: flex;
+            align-items: flex-start;
+            width: 200%;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-slide-panel {
+            width: 50%;
+            flex: 0 0 50%;
+            min-width: 0;
+            align-self: flex-start;
+        }
+
+        @media (max-width: 700px) {
+            .modal-slide-tabs {
+                gap: 0.5rem;
+            }
+
+            .modal-slide-tab {
+                flex: 1 1 auto;
+                text-align: center;
+                padding: 0.6rem 0.8rem;
+            }
+        }
     </style>
 </head>
 
@@ -3256,133 +3321,122 @@
             </div>
 
             <div class="modal-section">
-                <p>
-                    Welcome to Shimansky, where every diamond's journey, from rough
-                    stone to finished piece, is shaped by nearly three decades of South
-                    African craftsmanship. We look forward to sharing it with our guests.
-                </p>
-                <p style="margin-top: 0.6rem">Sincerely yours,</p>
-
-                <img src="https://drive.google.com/thumbnail?id=1JtmpfOQgA6nwI1luMVwBQ_N-fbfc_B2y&sz=s1800"
-                    alt="Yair Shimansky signature" style="
-              width: 160px;
-              max-width: 40vw;
-              opacity: 0.88;
-              display: block;
-              margin-top: 0.4rem;
-            " />
-            </div>
-            <div class="modal-section">
-                <div class="founder-block">
-                    <div class="founder-block-text">
-                        <a href="https://shimansky.com/pages/about-us-our-story">
-                            <h3 class="btn-g-link">The Shimansky Story Since 1991</h3>
-                        </a>
-                        <p>
-                            The Beginning.
-                            <a class="btn-g-link" href="https://shimansky.com/pages/about-us-our-story">
-                                The Shimansky story</a>
-                            began in 1991, when founder and CEO Yair Shimansky arrived in South
-                            Africa after spending two years in Japan. The time spent in Japan
-                            served not only as a rite of passage into the world of diamonds and
-                            jewellery, but also as a major learning curve. It was here that he
-                            studied the science of light & optics in diamonds and where the
-                            Japanese culture of perfection made a life-long impression on him.
-                            Having learnt the intricacies of diamond qualities and the
-                            importance of cut and proportion, he was armed with a unique
-                            perspective on diamonds.
-                            <br />
-                        </p>
-                        <br />
-                        <p>
-                            Upon his arrival in South Africa, Shimansky started designing and
-                            crafting jewellery which he sold at a craft market for one year
-                            before opening a small outlet in a popular shopping mall. This lead
-                            to the opening of the first Shimansky boutique store in 1994. In
-                            1998 Shimansky decided to travel to the diamond mines in Kimberley,
-                            South Africa, and buy rough diamonds directly from the mines. The
-                            first batch of diamonds was given to a local polisher who polished
-                            the diamonds for weight gain and not to maximize their brilliance.
-                            This is when Shimansky decided to enter the world of diamond cutting
-                            and polishing and setup the first Shimansky diamond polishing
-                            workshop in 1999, unique among jewellers to this day. Shimansky now
-                            is a leading premium jewellery brand .
-                        </p>
-                    </div>
-                    <div class="founder-block-image">
-
-                        <img src="https://drive.google.com/thumbnail?id=17eHs02_3y-BuCFoB6pHOzKpbhh0lcMrz&sz=s1800"
-                            alt="Yair Shimansky" />
-                    </div>
+                <div class="modal-slide-tabs">
+                    <button type="button" class="modal-slide-tab active" data-slide-index="0">
+                        Our Story
+                    </button>
+                    <button type="button" class="modal-slide-tab" data-slide-index="1">
+                        Responsibility That Matters
+                    </button>
                 </div>
-            </div>
-            <div class="modal-section">
-                <a href="https://shimansky.com/pages/ethical-sourcing">
-                    <h3 class="btn-g-link">Responsibility That Matters</h3>
-                </a>
-                <p>
-                    Every Shimansky diamond is traded, sourced and certified with the
-                    same care we put into cutting it. In short, here's what that means:
-                </p>
-                <ul>
-                    <li>
-                        <strong>Kimberley Process compliant</strong> &mdash; every diamond
-                        is traded fairly and transparently, and guaranteed conflict-free.
-                    </li>
-                    <li>
-                        <strong>Sourced directly from the mine</strong> &mdash; Shimansky
-                        is one of the rare few jewellers licensed to buy rough diamonds
-                        straight from well-known South African diamond fields.
-                    </li>
-                    <li>
-                        <strong>Ethical Compliance certificate</strong> &mdash; every
-                        diamond is accompanied by our written guarantee of conflict-free
-                        origin, in accordance with the Kimberley Process.
-                    </li>
-                    <li>
-                        <strong>GIA certified</strong> &mdash; independently graded by the
-                        Gemological Institute of America for cut, colour, clarity and
-                        carat weight.
-                    </li>
-                    <li>
-                        <strong>Community impact</strong> &mdash; supporting the people
-                        and economies behind every stone, from mine to finger, cut and
-                        polished in-house in Cape Town.
-                    </li>
-                </ul>
-                <p style="
-              font-style: italic;
-              padding-left: 1rem;
-              border-left: 2px solid var(--soft-gold);
-              margin: 1rem 0;
-            ">
-                    "The gemstones herein invoiced have been purchased from legitimate
-                    sources not involved in funding conflict and in compliance with
-                    United Nations Resolutions. The seller hereby guarantees that these
-                    gemstones are conflict-free, based on personal knowledge and/or
-                    written guarantees provided by the suppliers of these gemstones."
-                </p>
+                <div class="modal-slide-viewport">
+                    <div class="modal-slide-track">
+                        <div class="modal-slide-panel">
+                            <div class="modal-section" style="padding:0; border:0;">
+                                <p>
+                                    Welcome to Shimansky, where every diamond's journey, from rough
+                                    stone to finished piece, is shaped by nearly three decades of South
+                                    African craftsmanship. We look forward to sharing it with our guests.
+                                </p>
+                                <p style="margin-top: 0.6rem">Sincerely yours,</p>
 
-                <div class="ethical-compliance-image" s></div>
-            </div>
+                                <img src="https://drive.google.com/thumbnail?id=1JtmpfOQgA6nwI1luMVwBQ_N-fbfc_B2y&sz=s1800"
+                                    alt="Yair Shimansky signature" style="
+                              width: 160px;
+                              max-width: 40vw;
+                              opacity: 0.88;
+                              display: block;
+                              margin-top: 0.4rem;
+                            " />
+                            </div>
+                            <div class="modal-section">
+                                <div class="founder-block">
+                                    <div class="founder-block-text">
+                                        <a href="https://shimansky.com/pages/about-us-our-story">
+                                            <h3 class="btn-g-link">The Shimansky Story Since 1991</h3>
+                                        </a>
+                                        <br />
+                                        <p>
+                                            The Beginning.
+                                            <a class="btn-g-link" href="https://shimansky.com/pages/about-us-our-story">
+                                                The Shimansky story</a>
+                                            began in 1991, when founder and CEO Yair Shimansky arrived in South
+                                            Africa after spending two years in Japan. The time spent in Japan
+                                            served not only as a rite of passage into the world of diamonds and
+                                            jewellery, but also as a major learning curve. It was here that he
+                                            studied the science of light & optics in diamonds and where the
+                                            Japanese culture of perfection made a life-long impression on him.
+                                            Having learnt the intricacies of diamond qualities and the
+                                            importance of cut and proportion, he was armed with a unique
+                                            perspective on diamonds.
+                                            <br />
+                                        </p>
+                                    </div>
+                                    <div class="founder-block-image">
 
-            <div class="modal-section">
-                <h3>Testimonials</h3>
-                <p>
-                    Hear directly from the people who know the Shimansky experience best
-                    &mdash; our team, our trade partners, and our guests.
-                </p>
-                <div class="video-testimonial-grid">
-                    <div class="video-testimonial-card">
-                        <div class="testimonial-video-frame">
-                            <video controls playsinline preload="none"
-                                poster="https://drive.google.com/thumbnail?id=1JUhKn6E4zInU1jcjRnll2PUzB_esZqzM&sz=s1800">
-                                <source src="./videos/SHIMANSKY_TESTIMONIALS.mp4" type="video/mp4" />
-                            </video>
+                                        <img src="https://drive.google.com/thumbnail?id=17eHs02_3y-BuCFoB6pHOzKpbhh0lcMrz&sz=s1800"
+                                            alt="Yair Shimansky" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-slide-panel">
+                            <div class="modal-section" style="padding:0; border:0;">
+                                <a href="https://shimansky.com/pages/ethical-sourcing">
+                                    <h3 class="btn-g-link">Responsibility That Matters</h3>
+                                </a>
+                                <p>
+                                    Every Shimansky diamond is traded, sourced and certified with the
+                                    same care we put into cutting it. In short, here's what that means:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Kimberley Process compliant</strong> &mdash; every diamond
+                                        is traded fairly and transparently, and guaranteed conflict-free.
+                                    </li>
+                                    <li>
+                                        <strong>Sourced directly from the mine</strong> &mdash; Shimansky
+                                        is one of the rare few jewellers licensed to buy rough diamonds
+                                        straight from well-known South African diamond fields.
+                                    </li>
+                                    <li>
+                                        <strong>Ethical Compliance certificate</strong> &mdash; every
+                                        diamond is accompanied by our written guarantee of conflict-free
+                                        origin, in accordance with the Kimberley Process.
+                                    </li>
+                                    <li>
+                                        <strong>GIA certified</strong> &mdash; independently graded by the
+                                        Gemological Institute of America for cut, colour, clarity and
+                                        carat weight.
+                                    </li>
+                                    <li>
+                                        <strong>Community impact</strong> &mdash; supporting the people
+                                        and economies behind every stone, from mine to finger, cut and
+                                        polished in-house in Cape Town.
+                                    </li>
+                                </ul>
+
+
+                                <div class="ethical-compliance-image" s></div>
+                                <p style="
+                              font-style: italic;
+                              padding-left: 1rem;
+                              border-left: 2px solid var(--soft-gold);
+                              margin: 1rem 0;
+                            ">
+                                    "The gemstones herein invoiced have been purchased from legitimate
+                                    sources not involved in funding conflict and in compliance with
+                                    United Nations Resolutions. The seller hereby guarantees that these
+                                    gemstones are conflict-free, based on personal knowledge and/or
+                                    written guarantees provided by the suppliers of these gemstones."
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 
@@ -3410,9 +3464,10 @@
                     <div class="popup-slide" data-caption="Guided By A Master Craftsman" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1sNXBc4MjiEAbZInnE_nSnAhtOweQBJtH&sz=s1800&quot;);
               "></div>
+                 /div>
                     <div class="popup-slide" data-caption="Guests Try Their Hand At Polishing" style="
-                background-image: url(&quot;https://drive.google.com/thumbnail?id=1EDi7WsMTbISxxDwD7xAyl4J7T3KT0RIA&sz=s1800&quot;);
-              "></div>
+                    background-image: url(&quot;https://drive.google.com/thumbnail?id=1EDi7WsMTbISxxDwD7xAyl4J7T3KT0RIA&sz=s1800&quot;);
+                "></div>
               -->
 
                     <div class="popup-slide" data-caption="Talking You Through the Craft" style="
@@ -3433,6 +3488,13 @@
                     <div class="popup-slide" data-caption="The Gin Tasting" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1ocScxJurnxzInb7bkhTwQgQHOVn1mTIN&sz=s1800&quot;);
               "></div>
+              
+                    <div class="popup-slide" data-caption="A Toast To Remember" style="
+                    background-image: url(&quot;https://drive.google.com/thumbnail?id=1Y8uJhC8lraPUUoaFHlE8uPbBFfG_qSaz&sz=s1800&quot;);
+                "></div>
+              
+              
+              
                     <div class="popup-slide" data-caption="RockWell Showroom" style="
                 background-image: url(&quot;https://drive.google.com/thumbnail?id=1cLl_ise4BQNgfL_TbqFsyiH5FYk-j74U&sz=s1800&quot;);
               "></div>
@@ -3490,7 +3552,21 @@
                     class="pill pill-in">Factory tour</span><span class="pill pill-in">Gin, whisky or wine
                     pairing</span><span class="pill pill-in">R1,900 / $100 pp</span>
             </div>
-            <div class="modal-section">
+            <div class="modal-slide-tabs">
+                <button type="button" class="modal-slide-tab active" data-slide-index="0">
+                    The Experience
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="1">
+                    Location
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="2">
+                    Reviews
+                </button>
+            </div>
+            <div class="modal-slide-viewport">
+                <div class="modal-slide-track">
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>Polish-A-Diamond Experience</h3>
                 <p>
                     A hands-on experience where your clients don’t just see a diamond,
@@ -3547,7 +3623,10 @@
                     </li>
                 </ul>
             </div>
-            <div class="modal-section">
+
+                    </div>
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>The Rockwell Location</h3>
                 <h4>The Shimansky Rockwell Experience, Green Point</h4>
                 <p>
@@ -3625,6 +3704,11 @@
                     </li>
                     <li>Stores are closed on 25 December.</li>
                 </ul>
+            </div>
+
+                    </div>
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <div class="modal-section testimonial-section">
                     <div class="testimonial-heading-wrap">
                         <span class="testimonial-eyebrow">Guest Reviews</span>
@@ -3706,6 +3790,9 @@
                                 10% worldwide.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
             </div>
@@ -3805,7 +3892,21 @@
                 <span class="pill pill-in">3.3 billion years of history</span><span class="pill pill-in">Diamond
                     polishing workshop</span><span class="pill pill-in">R400 waived when pre-booked</span>
             </div>
-            <div class="modal-section">
+            <div class="modal-slide-tabs">
+                <button type="button" class="modal-slide-tab active" data-slide-index="0">
+                    The Experience
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="1">
+                    Location
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="2">
+                    Reviews
+                </button>
+            </div>
+            <div class="modal-slide-viewport">
+                <div class="modal-slide-track">
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>Included in the Tour</h3>
                 <p>
                     The Cape Town Diamond Museum invites guests into a world of rare
@@ -3879,7 +3980,28 @@
                     </li>
                 </ul>
             </div>
-            <div class="modal-section">
+
+                    </div>
+                    <div class="modal-slide-panel">
+                      <div class="modal-section" style="padding:0; border:0;">
+    <h3>The Museum Location</h3>
+    <h4>Shimansky Diamond Experience, Clock Tower</h4>
+    <p>
+        <strong>Location:</strong> V&amp;A Waterfront Clock Tower, Level 1, Cape Town.
+    </p>
+    <p>
+        <strong>Best for:</strong> Museum visit, diamond heritage, factory viewing, showroom and jewellery discovery.
+    </p>
+    <p>
+        <strong>Hours:</strong> Monday to Sunday, 09:00 – 20:00, last tour 19:15.
+    </p>
+    <p>
+        <strong>Factory Hours:</strong> Mon – Thurs: 09:00 to 16:00 | Friday : 09:00 – 12:00
+    </p>
+    <a class="location-link" href="https://maps.app.goo.gl/Zq5DuSZgAJKSeVeW9" target="_blank"
+        rel="noopener">📍 Open in Google Maps</a>
+</div>  
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>Information</h3>
                 <ul>
                     <li>
@@ -3899,6 +4021,11 @@
                     </li>
                 </ul>
             </div>
+
+                    </div>
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
+            
             <div class="modal-section testimonial-section">
                 <div class="testimonial-heading-wrap">
                     <span class="testimonial-eyebrow">Guest Reviews</span>
@@ -3955,7 +4082,29 @@
                     </div>
                 </div>
             </div>
+                <div class="modal-section">
+                    <div class="testimonial-heading-wrap">
+
+                   <br>
+                <h3>Testimonials</h3> </div>
+                <p>
+                    Hear directly from the people who know the Shimansky experience best
+                    &mdash; our team, our trade partners, and our guests.
+                </p>
+                <div class="video-testimonial-grid">
+                    <div class="video-testimonial-card">
+                        <div class="testimonial-video-frame">
+                            <video controls playsinline preload="none"
+                                poster="https://drive.google.com/thumbnail?id=1JUhKn6E4zInU1jcjRnll2PUzB_esZqzM&sz=s1800">
+                                <source src="./videos/SHIMANSKY_TESTIMONIALS.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
             <div class="modal-section museum-tripadvisor-section">
+                <br>
                 <h3>TripAdvisor Travellers’ Choice 2026</h3>
                 <div class="location-tripadvisor-badge-wrap" style="flex-direction: column; align-items: center">
                     <div class="tripadvisor-award-row">
@@ -3984,7 +4133,11 @@
                     </div>
                 </div>
             </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 
     <div class="modal" id="m-shopping">
@@ -4093,7 +4246,21 @@
                     </button>
                 </a>
             </div>
-            <div class="modal-section">
+            <div class="modal-slide-tabs">
+                <button type="button" class="modal-slide-tab active" data-slide-index="0">
+                    The Experience
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="1">
+                    Location
+                </button>
+                <button type="button" class="modal-slide-tab" data-slide-index="2">
+                    Giving Back
+                </button>
+            </div>
+            <div class="modal-slide-viewport">
+                <div class="modal-slide-track">
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>Experience Includes</h3>
                 <ul>
                     <li>Beverage on arrival.</li>
@@ -4113,7 +4280,9 @@
                 </p>
             </div>
 
-            <div class="modal-section">
+                    </div>
+                    <div class="modal-slide-panel">
+                        <div class="modal-section" style="padding:0; border:0;">
                 <h3>By appointment</h3>
                 <p>
                     The V&amp;A Waterfront Boutique and Clock Tower showroom are
@@ -4160,7 +4329,10 @@
                         rel="noopener">📍 Open in Google Maps</a>
                 </div>
             </div>
-            <div class="modal-section shopping-foundation-wrap">
+
+                    </div>
+                    <div class="modal-slide-panel">
+                        <div class="modal-section shopping-foundation-wrap" style="padding:0; border:0;">
                 <div class="shopping-foundation-embed">
                     <div class="commit-panel">
                         <div class="commit-eyebrow">The Shimansky Diamond Foundation</div>
@@ -4190,6 +4362,9 @@
                             purchasing our “My Africa, My Shimansky” bracelets. All proceeds
                             go directly to the Shimansky Foundation.
                         </p>
+                    </div>
+                </div>
+            </div>
                     </div>
                 </div>
             </div>
@@ -4671,6 +4846,55 @@
                 topBtn.classList.toggle("visible", isOpen && canScroll && atBottom);
         }
 
+        /* ─── Modal sliding content blocks (tabs) ─── */
+        function refreshSlidePanel(tabGroup, animate) {
+            const viewport = tabGroup.nextElementSibling;
+            if (!viewport || !viewport.classList.contains("modal-slide-viewport")) return;
+            const track = viewport.querySelector(".modal-slide-track");
+            const panels = track.querySelectorAll(".modal-slide-panel");
+            const tabs = tabGroup.querySelectorAll(".modal-slide-tab");
+            const activeTab = tabGroup.querySelector(".modal-slide-tab.active") || tabs[0];
+            const index = Array.prototype.indexOf.call(tabs, activeTab);
+            const count = panels.length;
+            if (!animate) {
+                track.style.transition = "none";
+                viewport.style.transition = "none";
+            }
+            track.style.width = (count * 100) + "%";
+            panels.forEach((panel) => {
+                panel.style.width = (100 / count) + "%";
+                panel.style.flex = `0 0 ${100 / count}%`;
+            });
+            track.style.transform = `translateX(-${index * (100 / count)}%)`;
+            if (panels[index]) viewport.style.height = panels[index].scrollHeight + "px";
+            if (!animate) {
+                void track.offsetHeight;
+                track.style.transition = "";
+                viewport.style.transition = "";
+            }
+        }
+
+        document.querySelectorAll(".modal-slide-tabs").forEach((tabGroup) => {
+            const tabs = tabGroup.querySelectorAll(".modal-slide-tab");
+            tabs.forEach((tab) => {
+                tab.addEventListener("click", () => {
+                    tabs.forEach((t) => t.classList.remove("active"));
+                    tab.classList.add("active");
+                    refreshSlidePanel(tabGroup, true);
+                    const modal = tabGroup.closest(".modal");
+                    if (modal) {
+                        tabGroup.scrollIntoView({ block: "start", behavior: "smooth" });
+                        setTimeout(() => updateModalScrollHint(modal), 480);
+                    }
+                });
+            });
+            refreshSlidePanel(tabGroup, false);
+        });
+
+        window.addEventListener("resize", () => {
+            document.querySelectorAll(".modal-slide-tabs").forEach((tabGroup) => refreshSlidePanel(tabGroup, false));
+        });
+
         document
             .querySelectorAll(
                 ".modal-trigger, .read-more-nav, .read-more[data-modal]",
@@ -4688,6 +4912,9 @@
                             if (typeof gallery._resetGallery === "function")
                                 gallery._resetGallery();
                         });
+                    modal.querySelectorAll(".modal-slide-tabs").forEach((tabGroup) => {
+                        refreshSlidePanel(tabGroup, false);
+                    });
                 });
             });
 
