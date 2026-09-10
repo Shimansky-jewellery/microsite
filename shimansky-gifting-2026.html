@@ -162,6 +162,9 @@
       justify-content: center;
       padding: 0 100px;
     }
+    .contact-panel {
+        padding-left: 18px;
+      }
 
     .panel-mat {
       background: var(--ivory);
@@ -503,6 +506,11 @@
       background: rgba(183, 155, 98, 0.4);
       margin: 22px 0;
     }
+    .team-image {
+      width: 82%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     /* ==========================================================
        MOBILE / PHONE VIEW
@@ -542,6 +550,9 @@
       .panel-text {
         padding: 56px 28px 40px;
         justify-content: flex-start;
+      }
+      .contact-panel {
+        padding-left:  revert-rule;
       }
 
       .panel-text h1 {
@@ -604,7 +615,7 @@
       .trio-mats .frame {
         flex: 0 0 200px;
         width: 100%;
-        height: 200px;
+        height: 100%;
       }
 
       .fine-print,
@@ -641,17 +652,18 @@
       /* ---- embossed Southern Cross page ---- */
       .emboss-wrap {
         position: static;
-        height: 260px;
+        height: 403px;
       }
 
       .emboss-text {
-        font-size: 44px;
+        font-size: 30px;
         letter-spacing: 1px;
       }
 
       .emboss-caption {
         position: static;
-        padding: 24px 28px 40px;
+        padding: 24px 28px 0px;
+        bottom:130px;
       }
 
       .emboss-caption .body-copy {
@@ -674,11 +686,11 @@
 
       .cover-emboss-caption {
         top: auto;
-        bottom: 130px;
+        bottom: 330px;
       }
 
       .cover-emboss-caption .sub {
-        font-size: 13px;
+        font-size: 20px;
       }
 
       /* ---- spread cover (unused variant, kept safe) ---- */
@@ -697,11 +709,16 @@
       .cover-text-panel .tagline {
         max-width: 100%;
       }
+
+      .team-image {
+        width: 100%;
+   
+      }
     }
 
     @media (max-width: 420px) {
       .cover-emboss-word {
-        font-size: 62px;
+        font-size: 40px;
       }
 
       .panel-mat .frame {}
@@ -1133,7 +1150,7 @@
   <!-- ============ PAGE 15 — CONTACT US =========== -->
   <div class="page bg-charcoal">
     <div class="spread">
-      <div class="panel panel-text" style="padding-left:100px;">
+      <div class="panel panel-text contact-panel">
       
         <span class="eyebrow on-dark">Get In Touch</span>
         <h1 class="display" style="margin-top:18px;">Contact Us</h1>
@@ -1148,8 +1165,8 @@
       </div>
       <div class="panel panel-mat">
         <div class="frame">
-          <img src="https://drive.google.com/thumbnail?id=1jIGzMzigI7vBXQqj0jycKrVsbgv55GLs&sz=s1800" alt="Contact Us"
-            style="width:82%; height:100%; object-fit:cover;" />
+          <img class="team-image" src="https://drive.google.com/thumbnail?id=1jxMGszxpwsrl_Pxc99NpbuqEjTJxlYw4&sz=s1800" alt="Contact Us"
+            />
         </div>
       </div>
     </div>
