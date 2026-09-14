@@ -326,7 +326,7 @@
     .emboss-text {
       font-family: "Helvetica", "Arial", "sans-serif";
       font-weight: 500;
-      font-size: 132px;
+      font-size: 111px;
       letter-spacing: 4px;
       color: var(--ivory);
       text-shadow:
@@ -336,6 +336,7 @@
         -1px -1px 1px rgba(255, 255, 255, 0.25);
       white-space: nowrap;
       user-select: none;
+       margin-bottom: 200px;
     }
 
     .emboss-caption {
@@ -360,10 +361,11 @@
     .cover-emboss {
       position: absolute;
       inset: 0;
-      background-color: var(--charcoal2);
-      background-image:
+      background-color: var(--charcoal);
+     /* background-image:
         radial-gradient(ellipse 620px 420px at 68% 12%, rgba(0, 0, 0, 0.5), transparent 70%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        */
     }
 
     .cover-emboss-word {
@@ -658,6 +660,7 @@
       .emboss-text {
         font-size: 30px;
         letter-spacing: 1px;
+        margin-bottom: 0px
       }
 
       .emboss-caption {
@@ -733,7 +736,7 @@
 <body>
 
   <!-- ============ PAGE 1 — COVER (embossed wordmark) ============ -->
-  <div class="page bg-charcoal2">
+  <div class="page bg-charcoal">
     <div class="cover-emboss"></div>
     <div class="cover-emboss-word">SHIMANSKY</div>
     <div class="cover-emboss-caption">
@@ -824,13 +827,12 @@
     <div class="trio-mats" style="top: 400px; bottom: auto;">
       <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
 
-        <img src="https://drive.google.com/thumbnail?id=1ZIQu7lx-i8VAfCfbuy1c7iUxwNsXxjmz&sz=s1800" alt="My Africa"
+        <img src="https://drive.google.com/thumbnail?id=1vhZ-a_I7QtYYAptSDzGK9LoBj3IJGUzT&sz=s1800" alt="My Africa"
           style="width:100%; height:100%; object-fit:cover;" />
       </div>
 
       <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-
-        <img src="https://drive.google.com/thumbnail?id=1eRxyr2-UTThjkWlzlvNcBmpvoSFIUhmZ&sz=s1800" alt="My Africa"
+        <img src="https://drive.google.com/thumbnail?id=15Cu6kSSBT2HKAi8mQ13Ewl7FsUNs0RcY&sz=s1800" alt="My Africa"
           style="width:100%; height:100%; object-fit:cover;" />
       </div>
 
@@ -850,7 +852,7 @@
   </div>
 
   <!-- ============ PAGE 5 — PINS (centered on dark) ============ -->
-  <div class="page bg-charcoal2">
+  <div class="page bg-charcoal">
     <div class="centered">
       <span class="eyebrow on-dark">A Precious Creation</span>
       <h1 class="display" style="margin-top:20px;">My Africa &amp; Shimansky Pins</h1>
@@ -982,7 +984,7 @@
     <div class="spread">
       <div class="panel panel-mat">
         <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-          <img src="https://drive.google.com/thumbnail?id=1iFLiqIkxbES83LHTT_NVgtfCalgXfrdP&sz=s1800"
+          <img src="https://drive.google.com/thumbnail?id=10H3pEp9I3EyHCW9aEtGefUVVmUj5kSrN&sz=s1800"
             alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
         </div>
       </div>
@@ -1006,7 +1008,7 @@
   </div>
 
   <!-- ============ PAGE 10 — TANZANITE COLLECTION (centered on dark) ============ -->
-  <div class="page bg-charcoal2">
+  <div class="page bg-charcoal">
     <div class="centered">
       <span class="eyebrow on-dark">Sourced From The Maasai</span>
       <h1 class="display" style="margin-top:20px;">Tanzanite Collection</h1>
@@ -1045,7 +1047,8 @@
     <div class="spread">
       <div class="panel panel-mat">
         <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-          <img src="https://drive.google.com/thumbnail?id=1V1AMM-Cc1LU4jTD-BWQEn6iMrSkY9D60&sz=s1800"
+        
+          <img src="https://drive.google.com/thumbnail?id=14GbTcMSeo3D4GWdzScR2E6qyHN91jeNo&sz=s1800"
             alt="Dancing Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
         </div>
       </div>
@@ -1098,7 +1101,7 @@
   </div>
 
   <!-- ============ PAGE 13 — SOUTHERN CROSS COLLECTION (embossed signature page) ============ -->
-  <div class="page bg-charcoal2"
+  <div class="page bg-charcoal"
     style="background-image: linear-gradient(rgba(10,10,10,0.55), rgba(10,10,10,0.55)), url('https://drive.google.com/thumbnail?id=1K9EURqyWGxFhgstP9H_GTRjtVtuV0J63&sz=s1800'); background-size: cover; background-position: center;">
     <div class="emboss-wrap">
       <div class="emboss-text">SOUTHERN&nbsp;CROSS</div>
