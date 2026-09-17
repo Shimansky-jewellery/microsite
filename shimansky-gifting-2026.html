@@ -792,32 +792,6 @@
       border-color: rgba(183, 155, 98, 0.85);
     }
 
-    .slider-dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 9px;
-      background: rgba(20, 20, 20, 0.38);
-      padding: 7px 11px;
-      border-radius: 20px;
-    }
-
-    .slider-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: rgba(248, 246, 241, 0.45);
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease;
-      padding: 0;
-      border: none;
-    }
-
-    .slider-dot.active {
-      background: var(--soft-gold);
-      transform: scale(1.35);
-    }
-
   </style>
 </head>
 
@@ -1033,12 +1007,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            <button class="slider-dot" aria-label="Slide 3"></button>
-            <button class="slider-dot" aria-label="Slide 4"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1114,16 +1082,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            <button class="slider-dot" aria-label="Slide 3"></button>
-            <button class="slider-dot" aria-label="Slide 4"></button>
-            <button class="slider-dot" aria-label="Slide 5"></button>
-            <button class="slider-dot" aria-label="Slide 6"></button>
-            <button class="slider-dot" aria-label="Slide 7"></button>
-            <button class="slider-dot" aria-label="Slide 8"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1183,14 +1141,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            <button class="slider-dot" aria-label="Slide 3"></button>
-            <button class="slider-dot" aria-label="Slide 4"></button>
-            <button class="slider-dot" aria-label="Slide 5"></button>
-            <button class="slider-dot" aria-label="Slide 6"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1264,10 +1214,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1319,10 +1265,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1371,10 +1313,6 @@
           </div>
           <div class="slider-controls">
             <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
-            <div class="slider-dots">
-            <button class="slider-dot active" aria-label="Slide 1"></button>
-            <button class="slider-dot" aria-label="Slide 2"></button>
-            </div>
             <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
           </div>
         </div>
@@ -1430,22 +1368,17 @@
     document.querySelectorAll('[data-slider]').forEach(function (slider) {
       var track = slider.querySelector('.slider-track');
       var slides = slider.querySelectorAll('.slider-slide');
-      var dots = slider.querySelectorAll('.slider-dot');
       var index = 0;
 
       function go(i) {
         index = (i + slides.length) % slides.length;
         track.style.transform = 'translateX(-' + (index * 100) + '%)';
-        dots.forEach(function (d, di) { d.classList.toggle('active', di === index); });
       }
 
       var prev = slider.querySelector('.slider-prev');
       var next = slider.querySelector('.slider-next');
       if (prev) prev.addEventListener('click', function (e) { e.stopPropagation(); go(index - 1); });
       if (next) next.addEventListener('click', function (e) { e.stopPropagation(); go(index + 1); });
-      dots.forEach(function (d, di) {
-        d.addEventListener('click', function (e) { e.stopPropagation(); go(di); });
-      });
     });
   </script>
 
