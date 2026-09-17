@@ -730,6 +730,94 @@
         font-size: 24px;
       }
     }
+  
+    /* ---------- Image slider (prev/next flip-through) ---------- */
+    .frame.slider {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      height: 100%;
+    }
+
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    .slider-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .slider-controls {
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      z-index: 3;
+    }
+
+    .slider-arrow {
+      position: static;
+      transform: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(20, 20, 20, 0.45);
+      border: 1px solid rgba(183, 155, 98, 0.55);
+      color: var(--ivory);
+      font-size: 17px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      font-family: 'Poppins', 'Helvetica', Arial, sans-serif;
+      flex-shrink: 0;
+    }
+
+    .slider-arrow:hover {
+      background: rgba(183, 155, 98, 0.85);
+      border-color: rgba(183, 155, 98, 0.85);
+    }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      background: rgba(20, 20, 20, 0.38);
+      padding: 7px 11px;
+      border-radius: 20px;
+    }
+
+    .slider-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(248, 246, 241, 0.45);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+      padding: 0;
+      border: none;
+    }
+
+    .slider-dot.active {
+      background: var(--soft-gold);
+      transform: scale(1.35);
+    }
+
   </style>
 </head>
 
@@ -926,9 +1014,33 @@
     <div class="spread">
       <div class="panel panel-mat">
 
-        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-          <img src="https://drive.google.com/thumbnail?id=1MvnDVDmFYHXkjfd9NneVHadkhsZH0vHz&sz=s1800"
-            alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <div class="slider-track">
+            <div class="slider-slide">
+       
+              <img src="https://drive.google.com/thumbnail?id=1MvnDVDmFYHXkjfd9NneVHadkhsZH0vHz&sz=s1800" alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+      
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1m69Q2bGDm-kV_YbCvdzlbd4sZlDaUtlt&sz=s1800" alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+             <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1XOHiuVmhM8ulYOG7zj5hbGbjxBpzM5P2&sz=s1800" alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+             <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=13GA3SIcjSh_Pg50ap2F-n8irWW82JjQs&sz=s1800" alt="Cape Town Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
+            <button class="slider-dot" aria-label="Slide 4"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="panel panel-text">
@@ -968,9 +1080,52 @@
       </div>
       <div class="panel panel-mat">
 
-        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-          <img src="https://drive.google.com/thumbnail?id=1-Ss0EU_h5vzVzjHYHdcyNqCt9NVf1dN4&sz=s1800"
-            alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1-Ss0EU_h5vzVzjHYHdcyNqCt9NVf1dN4&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1zJjWLIi_ycsq9Z4dl68BP63SNvVY74T3&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+           
+               <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1eLlKzvhXBvD32i8q_P3caJHrWXLzwhyy&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+     
+               <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1MmLNH6QSzZgy34qY5_78Uc1wSpG1GTcG&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+           
+              <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1qaKBMKKtYBEFY8j_JQdifTQOKklnov8U&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+  
+              <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1qaKBMKKtYBEFY8j_JQdifTQOKklnov8U&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+        
+              <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1yibqJjQTf9vK_deZrM0Tu3up9WkIOgh_&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+             <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1AmBNYhe29vRPn-qD5El_2U5dDtOuUcB8&sz=s1800" alt="Elephant Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
+            <button class="slider-dot" aria-label="Slide 4"></button>
+            <button class="slider-dot" aria-label="Slide 5"></button>
+            <button class="slider-dot" aria-label="Slide 6"></button>
+            <button class="slider-dot" aria-label="Slide 7"></button>
+            <button class="slider-dot" aria-label="Slide 8"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -983,9 +1138,61 @@
   <div class="page bg-charcoal">
     <div class="spread">
       <div class="panel panel-mat">
-        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-          <img src="https://drive.google.com/thumbnail?id=10H3pEp9I3EyHCW9aEtGefUVVmUj5kSrN&sz=s1800"
-            alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <div class="slider-track"> 
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1Z7WzQebuE1NfsAAn6f8-F8MlUrTAGl6T&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          
+              <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1arWLIYRHkQnU08sTAEq6DtQTDaqXGHiJ&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=10H3pEp9I3EyHCW9aEtGefUVVmUj5kSrN&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="slider-slide">
+          
+              <img src="https://drive.google.com/thumbnail?id=1WVT5EtxxxYHfBgwGNZ-53x8gTNco8HR9&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+
+ 
+              <div class="slider-slide">
+          
+              <img src="https://drive.google.com/thumbnail?id=1YUnr_40NYExfI_FIZQ5spYYrUmtCyz3S&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+
+
+
+              <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1jnMjI-kYUCSxLJhA_DNTeWXCjNSDBzbz&sz=s1800" alt="My Africa Bracelet" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
+            <button class="slider-dot" aria-label="Slide 4"></button>
+            <button class="slider-dot" aria-label="Slide 5"></button>
+            <button class="slider-dot" aria-label="Slide 6"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="panel panel-text">
@@ -1046,10 +1253,23 @@
   <div class="page bg-charcoal">
     <div class="spread">
       <div class="panel panel-mat">
-        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-        
-          <img src="https://drive.google.com/thumbnail?id=14GbTcMSeo3D4GWdzScR2E6qyHN91jeNo&sz=s1800"
-            alt="Dancing Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1vY0pAYh6JRoHGPpgVO3O3RHr4xhkRGPd&sz=s1800" alt="Dancing Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=16bbQFsTkn8mdmbFFgWLYjTREh3HUhONK&sz=s1800" alt="Dancing Tanzanite Pendant" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="panel panel-text">
@@ -1088,10 +1308,23 @@
         <div class="price">ROUND TANZANITE SILVER: R1500 WSP</div>
       </div>
       <div class="panel panel-mat">
-        <div class="frame" style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
-
-          <img src="https://drive.google.com/thumbnail?id=1gtnh6Gd2T80kSk-T46BVzFUr8AMfHxMk&sz=s1800"
-            alt="Tanzanite Solitaire Pendant" style="width:100%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider style="background:linear-gradient(135deg, rgba(183,155,98,0.25), rgba(183,155,98,0.08));">
+          <div class="slider-track">
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1gtnh6Gd2T80kSk-T46BVzFUr8AMfHxMk&sz=s1800" alt="Tanzanite Solitaire Pendant" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1gtnh6Gd2T80kSk-T46BVzFUr8AMfHxMk&sz=s1800" alt="Tanzanite Solitaire Pendant" style="width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -1126,10 +1359,24 @@
   <div class="page bg-charcoal">
     <div class="spread">
       <div class="panel panel-mat">
-        <div class="frame">
-
-          <img src="https://drive.google.com/thumbnail?id=1k-1w6yXtFsXY43P5FaeYCas2QILwXizM&sz=s1800"
-            alt="Southern Cross Tanzanite Pendant" style="width:82%; height:100%; object-fit:cover;" />
+        <div class="frame slider" data-slider>
+          <div class="slider-track">
+            <div class="slider-slide">
+        
+              <img src="https://drive.google.com/thumbnail?id=1qU0O4JZjvVB7_gfiipFUjDPdtBxvGUUE&sz=s1800" alt="Southern Cross Tanzanite Pendant" style="width:82%; height:100%; object-fit:cover;" />
+            </div>
+            <div class="slider-slide">
+              <img src="https://drive.google.com/thumbnail?id=1tO6VUurdMILzhE_pX6diUtqsNggYlRnn&sz=s1800" alt="Southern Cross Tanzanite Pendant" style="width:82%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow slider-prev" aria-label="Previous image">&#8249;</button>
+            <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            </div>
+            <button class="slider-arrow slider-next" aria-label="Next image">&#8250;</button>
+          </div>
         </div>
       </div>
       <div class="panel panel-text">
@@ -1177,6 +1424,30 @@
       <span>SHIMANSKY</span><span>15</span>
     </div>
   </div>
+
+
+  <script>
+    document.querySelectorAll('[data-slider]').forEach(function (slider) {
+      var track = slider.querySelector('.slider-track');
+      var slides = slider.querySelectorAll('.slider-slide');
+      var dots = slider.querySelectorAll('.slider-dot');
+      var index = 0;
+
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function (d, di) { d.classList.toggle('active', di === index); });
+      }
+
+      var prev = slider.querySelector('.slider-prev');
+      var next = slider.querySelector('.slider-next');
+      if (prev) prev.addEventListener('click', function (e) { e.stopPropagation(); go(index - 1); });
+      if (next) next.addEventListener('click', function (e) { e.stopPropagation(); go(index + 1); });
+      dots.forEach(function (d, di) {
+        d.addEventListener('click', function (e) { e.stopPropagation(); go(di); });
+      });
+    });
+  </script>
 
 </body>
 
