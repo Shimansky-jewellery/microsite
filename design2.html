@@ -3011,6 +3011,588 @@
                 height: 240px;
             }
         }
+
+        /* ================================
+           CORPORATE GIFTING — MY AFRICA BRACELET BLOCKS
+           Mirrors the Tanzanite & Southern Cross product-block structure.
+           ================================ */
+        #m-corporate-gifting .bracelet-block-intro {
+            max-width: 650px;
+            margin: 0 0 1rem !important;
+        }
+
+        #m-corporate-gifting .bracelet-products-grid {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+        }
+
+        #m-corporate-gifting .bracelet-product-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem !important;
+            background: transparent !important;
+            border: 1px solid rgba(183, 155, 98, 0.18) !important;
+            box-shadow: none !important;
+        }
+
+        #m-corporate-gifting .bracelet-product-card h4 {
+            margin-top: 0.75rem !important;
+        }
+
+        #m-corporate-gifting .bracelet-product-card p {
+            margin-bottom: 0.8rem;
+        }
+
+        #m-corporate-gifting .bracelet-product-card .modal-price {
+            margin-top: auto !important;
+            align-self: flex-start;
+        }
+
+        #m-corporate-gifting .bracelet-fade-gallery {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #fff;
+            border: 0;
+        }
+
+        #m-corporate-gifting .bracelet-fade-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.15s ease;
+            pointer-events: none;
+        }
+
+        #m-corporate-gifting .bracelet-fade-slide.active {
+            opacity: 1;
+        }
+
+        #m-corporate-gifting .bracelet-fade-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #m-corporate-gifting .bracelet-fade-dots {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 7px;
+            border-radius: 20px;
+            background: rgba(22, 22, 22, 0.36);
+            backdrop-filter: blur(4px);
+        }
+
+        #m-corporate-gifting .bracelet-fade-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background: rgba(248, 246, 241, 0.52);
+            transition: width 320ms ease, background 320ms ease;
+        }
+
+        #m-corporate-gifting .bracelet-fade-dot.active {
+            width: 18px;
+            background: var(--soft-gold);
+        }
+
+        #m-corporate-gifting .bracelet-block-note {
+            margin: 1rem auto 0 !important;
+            max-width: 720px;
+            text-align: center;
+            font-size: 0.68rem !important;
+            line-height: 1.6 !important;
+            font-style: italic;
+            color: rgba(30, 30, 30, 0.55) !important;
+        }
+
+        @media (max-width: 900px) {
+            #m-corporate-gifting .bracelet-products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #m-corporate-gifting .bracelet-fade-gallery {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #m-corporate-gifting .bracelet-fade-gallery {
+                height: 220px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #m-corporate-gifting .bracelet-fade-slide {
+                transition: none;
+            }
+        }
+
+        /* ================================
+           CORPORATE GIFTING — TANZANITE PRODUCT BLOCKS
+           Matches the My Africa bracelet blocks and Design2 popup styling.
+           ================================ */
+        #m-corporate-gifting .corporate-tanzanite-intro {
+            max-width: 680px;
+            margin: 0 0 1rem !important;
+        }
+
+        #m-corporate-gifting .corporate-tanzanite-grid {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem !important;
+            background: transparent !important;
+            border: 1px solid rgba(183, 155, 98, 0.18) !important;
+            box-shadow: none !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card h4 {
+            margin-top: 0.75rem !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card p {
+            margin-bottom: 0.8rem;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card .modal-price {
+            margin-top: auto !important;
+            align-self: flex-start;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-gallery {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.15s ease;
+            pointer-events: none;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-slide.active {
+            opacity: 1;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-dots {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 7px;
+            border-radius: 20px;
+            background: rgba(22, 22, 22, 0.36);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+
+        #m-corporate-gifting .tanzanite-fade-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background: rgba(248, 246, 241, 0.52);
+            transition: width 320ms ease, background 320ms ease;
+        }
+
+        #m-corporate-gifting .tanzanite-fade-dot.active {
+            width: 18px;
+            background: var(--soft-gold);
+        }
+
+        @media (max-width: 900px) {
+            #m-corporate-gifting .corporate-tanzanite-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #m-corporate-gifting .tanzanite-fade-gallery {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #m-corporate-gifting .tanzanite-fade-gallery {
+                height: 220px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #m-corporate-gifting .tanzanite-fade-slide {
+                transition: none;
+            }
+        }
+
+        /* ================================
+           CORPORATE GIFTING — TANZANITE STACKED ROW LAYOUT
+           Three full-width product rows, one beneath the next.
+           ================================ */
+        #m-corporate-gifting .corporate-tanzanite-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1.2rem !important;
+            margin-top: 1.2rem !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card {
+            display: grid !important;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            grid-template-areas:
+                "gallery title"
+                "gallery description"
+                "gallery price";
+            column-gap: clamp(1.3rem, 3vw, 2.4rem);
+            row-gap: 0.55rem;
+            align-items: center;
+            padding: 1rem !important;
+            min-height: 250px;
+            background: transparent !important;
+            border: 1px solid rgba(183, 155, 98, 0.18) !important;
+            box-shadow: none !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card .tanzanite-fade-gallery {
+            grid-area: gallery;
+            width: 75%;
+            height: 270px;
+            margin: 0 !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card h4 {
+            grid-area: title;
+            align-self: end;
+            margin: 0 !important;
+            font-size: 0.78rem !important;
+            line-height: 1.45 !important;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card > p {
+            grid-area: description;
+            align-self: start;
+            margin: 0 !important;
+            max-width: 34rem;
+        }
+
+        #m-corporate-gifting .tanzanite-gifting-card .modal-price {
+            grid-area: price;
+            align-self: start;
+            justify-self: start;
+            margin: 0.3rem 0 0 !important;
+        }
+
+        @media (max-width: 760px) {
+            #m-corporate-gifting .tanzanite-gifting-card {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "gallery"
+                    "title"
+                    "description"
+                    "price";
+                row-gap: 0.65rem;
+                min-height: 0;
+            }
+
+            #m-corporate-gifting .tanzanite-gifting-card .tanzanite-fade-gallery {
+                height: 240px;
+            }
+
+            #m-corporate-gifting .tanzanite-gifting-card h4 {
+                margin-top: 0.2rem !important;
+            }
+        }
+
+        /* ================================
+           CORPORATE GIFTING — UNIFIED TAB HEADINGS
+           Uses the same heading treatment as The Shimansky Foundation.
+           ================================ */
+        #m-corporate-gifting .corporate-unified-heading {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 1.6rem;
+        }
+
+        #m-corporate-gifting .bracelet-block-section > .corporate-unified-heading,
+        #m-corporate-gifting .corporate-tanzanite-section > .corporate-unified-heading {
+            margin-bottom: 1.8rem;
+        }
+
+        /* Keep the Foundation typography as the single shared heading system. */
+        #m-corporate-gifting .corporate-unified-heading .foundation-design2-eyebrow {
+            display: inline-block;
+            font-size: 0.66rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--soft-gold);
+            margin-bottom: 0.45rem;
+        }
+
+        #m-corporate-gifting .corporate-unified-heading .foundation-design2-title {
+            margin: 0 !important;
+            font-family: var(--heading-font, "Montserrat", "Helvetica", Arial, sans-serif) !important;
+            font-size: 1.8rem !important;
+            font-weight: 300 !important;
+            line-height: 1.18 !important;
+            color: var(--charcoal) !important;
+        }
+
+        #m-corporate-gifting .corporate-unified-heading .foundation-design2-rule {
+            width: 40px;
+            height: 1px;
+            background: var(--soft-gold);
+            margin: 0.65rem auto 1rem;
+        }
+
+        #m-corporate-gifting .corporate-unified-heading .foundation-design2-copy {
+            max-width: 34rem;
+            margin: 0 auto !important;
+            font-size: 0.84rem !important;
+            line-height: 1.8 !important;
+            font-weight: 300 !important;
+            color: rgba(30, 30, 30, 0.68) !important;
+        }
+
+        /* ================================
+           CORPORATE GIFTING — CONTACT US
+           Clean final-page treatment using only existing contact details.
+           ================================ */
+        #m-corporate-gifting .corporate-contact-section {
+            background: transparent !important;
+            color: var(--charcoal);
+        }
+
+        #m-corporate-gifting .corporate-contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.92fr);
+            min-height: 360px;
+            margin-top: 1.2rem;
+            border: 1px solid rgba(183, 155, 98, 0.18);
+            background: transparent;
+            overflow: hidden;
+        }
+
+        #m-corporate-gifting .corporate-contact-image-wrap {
+            min-height: 360px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        #m-corporate-gifting .corporate-contact-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            min-height: 360px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #m-corporate-gifting .corporate-contact-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(2rem, 4vw, 3.2rem);
+            background: rgba(183, 155, 98, 0.045);
+        }
+
+        #m-corporate-gifting .corporate-contact-kicker {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--soft-gold);
+        }
+
+        #m-corporate-gifting .corporate-contact-title {
+            margin: 0 !important;
+            font-family: var(--heading-font, "Montserrat", "Helvetica", Arial, sans-serif) !important;
+            font-size: 1.45rem !important;
+            font-weight: 300 !important;
+            line-height: 1.2 !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+            color: var(--charcoal) !important;
+        }
+
+        #m-corporate-gifting .corporate-contact-rule {
+            width: 40px;
+            height: 1px;
+            margin: 0.8rem 0 1.3rem;
+            background: var(--soft-gold);
+        }
+
+        #m-corporate-gifting .corporate-contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.28rem;
+            padding: 0.9rem 0;
+            border-top: 1px solid rgba(183, 155, 98, 0.16);
+        }
+
+        #m-corporate-gifting .corporate-contact-item:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        #m-corporate-gifting .corporate-contact-label {
+            font-size: 0.58rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--soft-gold);
+        }
+
+        #m-corporate-gifting .corporate-contact-link {
+            width: fit-content;
+            font-family: var(--body-font, "Montserrat", "Helvetica", Arial, sans-serif);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: var(--charcoal) !important;
+            border-bottom: 1px solid rgba(183, 155, 98, 0.45);
+            transition: var(--transition);
+        }
+
+        #m-corporate-gifting .corporate-contact-link:hover {
+            color: var(--soft-gold) !important;
+            border-bottom-color: var(--soft-gold);
+        }
+
+        @media (max-width: 760px) {
+            #m-corporate-gifting .corporate-unified-heading {
+                margin-bottom: 1.25rem;
+            }
+
+            #m-corporate-gifting .corporate-unified-heading .foundation-design2-title {
+                font-size: 1.55rem !important;
+            }
+
+            #m-corporate-gifting .corporate-unified-heading .foundation-design2-copy {
+                font-size: 0.8rem !important;
+                line-height: 1.7 !important;
+            }
+
+            #m-corporate-gifting .corporate-contact-layout {
+                grid-template-columns: 1fr;
+                min-height: 0;
+            }
+
+            #m-corporate-gifting .corporate-contact-image-wrap,
+            #m-corporate-gifting .corporate-contact-image {
+                min-height: 250px;
+                height: 250px;
+            }
+
+            #m-corporate-gifting .corporate-contact-details {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+
+        /* ================================
+           MY AFRICA BRACELETS — STACKED HORIZONTAL ROWS
+           Only change: each bracelet sits one underneath another,
+           with slideshow left and text / price right, matching Tanzanite.
+           ================================ */
+        #m-corporate-gifting .bracelet-products-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1.2rem !important;
+            margin-top: 1.2rem !important;
+            width: 100%;
+        }
+
+        #m-corporate-gifting .bracelet-product-card {
+            display: grid !important;
+            grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+            grid-template-areas:
+                "gallery title"
+                "gallery description"
+                "gallery price";
+            column-gap: clamp(1.3rem, 3vw, 2.4rem);
+            row-gap: 0.55rem;
+            align-items: center;
+            padding: 1rem !important;
+            min-height: 250px;
+        }
+
+        #m-corporate-gifting .bracelet-product-card .bracelet-fade-gallery {
+            grid-area: gallery;
+            width: 75%;
+            height: 270px;
+            margin: 0 !important;
+        }
+
+        #m-corporate-gifting .bracelet-product-card h4 {
+            grid-area: title;
+            align-self: end;
+            margin: 0 !important;
+            font-size: 0.78rem !important;
+            line-height: 1.45 !important;
+        }
+
+        #m-corporate-gifting .bracelet-product-card > p {
+            grid-area: description;
+            align-self: start;
+            margin: 0 !important;
+            max-width: 34rem;
+        }
+
+        #m-corporate-gifting .bracelet-product-card .modal-price {
+            grid-area: price;
+            align-self: start;
+            justify-self: start;
+            margin: 0.3rem 0 0 !important;
+        }
+
+        @media (max-width: 760px) {
+            #m-corporate-gifting .bracelet-product-card {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "gallery"
+                    "title"
+                    "description"
+                    "price";
+                row-gap: 0.65rem;
+                min-height: 0;
+            }
+
+            #m-corporate-gifting .bracelet-product-card .bracelet-fade-gallery {
+                width: 100%;
+                height: 240px;
+            }
+
+            #m-corporate-gifting .bracelet-product-card h4 {
+                margin-top: 0.2rem !important;
+            }
+        }
+
 </style>
 </head>
 <body>
@@ -3350,19 +3932,16 @@
 </section>
 <section data-section="4" id="s4">
 <div class="slide-bg section-gallery-bg" id="bg4">
+
 <div class="slide active" data-caption="Corporate Gifting, Styled To Impress" style='
-            background-image: url("https://drive.google.com/thumbnail?id=1OvydZbCpjxEDRWN0RC6IB_2pOfPgkcxs&amp;sz=s1800");
+            background-image: url("https://drive.google.com/thumbnail?id=1o45o6itxqosAARvar4C4uSrIE6wEga2_&amp;sz=s1800");
           '></div>
-<div class="slide" data-caption="Iconic Pieces For Your Clients And Team" style='
-            background-image: url("https://drive.google.com/thumbnail?id=19sjh1Z-GtiEo5qIKRwVZhZkVQ_c4-TQK&amp;sz=s1800");
-          '></div>
-<div class="slide" data-caption="Thoughtfully Curated, Beautifully Presented" style='
-            background-image: url("https://drive.google.com/thumbnail?id=1xZ-VpYoeiDxFMLdQhMSBBWSbYkJSy54U&amp;sz=s1800");
-          '></div>
+
 </div>
 <div class="photo-nav">
 <button aria-label="Previous image" class="photo-btn" onclick="prev(4)" type="button">
-                &lt;</button><button aria-label="Next image" class="photo-btn" onclick="next(4)" type="button">
+                &lt;</button>
+<button aria-label="Next image" class="photo-btn" onclick="next(4)" type="button">
                 &gt;
             </button>
 </div>
@@ -3479,7 +4058,6 @@
 </div>
 <div class="foundation-design2-support">
 <span class="foundation-design2-eyebrow">Support The Foundation</span>
-
 <div class="foundation-design2-rule"></div>
 <p class="foundation-design2-copy">
                 Purchase our My Africa, My Shimansky bracelets to support our
@@ -3489,103 +4067,197 @@
 </div>
 </div>
 <div class="modal-slide-panel">
-<div class="modal-section" style="padding:0; border:0;">
-<h3>My Africa Bracelets</h3>
-<div class="modal-grid">
-<div class="modal-item">
-<div class="modal-image-card" style="min-height:180px; background-image: url(https://drive.google.com/thumbnail?id=1MvnDVDmFYHXkjfd9NneVHadkhsZH0vHz&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">My Africa Collection</span>
-<div class="modal-image-title" style="font-size:1.1rem;">Cape Town</div>
+<div class="modal-section bracelet-block-section" style="padding:0; border:0;">
+<div class="corporate-unified-heading">
+<span class="foundation-design2-eyebrow">My Africa Collection</span>
+<h3 class="foundation-design2-title">My Africa Bracelets</h3>
+<div class="foundation-design2-rule"></div>
+<p class="foundation-design2-copy">Wear the spirit of Africa wherever you go with the My Africa Collection, created as a wearable keepsake inspired by South Africa and its enduring symbols.</p>
+</div>
+
+<div class="modal-grid bracelet-products-grid">
+<div class="modal-item bracelet-product-card">
+<div class="bracelet-fade-gallery" data-bracelet-fader="" data-fader-offset="0">
+<div class="bracelet-fade-slide active">
+<img alt="Shimansky Cape Town Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1MvnDVDmFYHXkjfd9NneVHadkhsZH0vHz&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Cape Town Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1m69Q2bGDm-kV_YbCvdzlbd4sZlDaUtlt&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Cape Town Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1XOHiuVmhM8ulYOG7zj5hbGbjxBpzM5P2&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Cape Town Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=13GA3SIcjSh_Pg50ap2F-n8irWW82JjQs&amp;sz=s1800"/>
+</div>
+<div aria-hidden="true" class="bracelet-fade-dots"></div>
+</div>
+<h4>Cape Town Adjustable Cord Bracelet</h4>
+<p>Silver with 14k gold plating — inspired by Table Mountain and the ocean. <br/> <br/>
+
+Like no other city in the world, Cape Town, with its iconic Table Mountain and deep blue oceans, carries a signature vibe felt from the moment you arrive. Treasure your memories wherever you go with this bracelet, expertly crafted in silver and 14k gold plating.</p>
+<span class="modal-price">R500 · WSP R300 EX VAT</span>
+</div>
+<div class="modal-item bracelet-product-card">
+<div class="bracelet-fade-gallery" data-bracelet-fader="" data-fader-offset="1100">
+<div class="bracelet-fade-slide active">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1-Ss0EU_h5vzVzjHYHdcyNqCt9NVf1dN4&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1zJjWLIi_ycsq9Z4dl68BP63SNvVY74T3&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1eLlKzvhXBvD32i8q_P3caJHrWXLzwhyy&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1MmLNH6QSzZgy34qY5_78Uc1wSpG1GTcG&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1qaKBMKKtYBEFY8j_JQdifTQOKklnov8U&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1yibqJjQTf9vK_deZrM0Tu3up9WkIOgh_&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky Elephant Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1AmBNYhe29vRPn-qD5El_2U5dDtOuUcB8&amp;sz=s1800"/>
+</div>
+<div aria-hidden="true" class="bracelet-fade-dots"></div>
+</div>
+<h4>Elephant Adjustable Cord Bracelet</h4>
+<p>Silver with 14k gold plating — representing strength, loyalty and grace. <br/> <br/>
+Embrace the beauty and wisdom of the elephant with this elegant bracelet, featuring a finely crafted silhouette in silver with 14k gold plating, blending durability with a touch of luxury, and a meaningful accent representing strength, loyalty and grace.
+</p>
+<span class="modal-price">R500 · WSP R300 EX VAT</span>
+</div>
+<div class="modal-item bracelet-product-card">
+<div class="bracelet-fade-gallery" data-bracelet-fader="" data-fader-offset="2200">
+<div class="bracelet-fade-slide active">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1Z7WzQebuE1NfsAAn6f8-F8MlUrTAGl6T&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1arWLIYRHkQnU08sTAEq6DtQTDaqXGHiJ&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=10H3pEp9I3EyHCW9aEtGefUVVmUj5kSrN&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1WVT5EtxxxYHfBgwGNZ-53x8gTNco8HR9&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1YUnr_40NYExfI_FIZQ5spYYrUmtCyz3S&amp;sz=s1800"/>
+</div>
+<div class="bracelet-fade-slide">
+<img alt="Shimansky My Africa Adjustable Cord Bracelet" src="https://drive.google.com/thumbnail?id=1jnMjI-kYUCSxLJhA_DNTeWXCjNSDBzbz&amp;sz=s1800"/>
+</div>
+<div aria-hidden="true" class="bracelet-fade-dots"></div>
+</div>
+<h4>My Africa Adjustable Cord Bracelet</h4>
+<p>Silver with 14k gold plating — featuring the silhouette of the African continent. <br> <br>
+Take a piece of Africa with you wherever you go, featuring a silhouette of the continent. Symbolising unity, heritage and pride, this bracelet combines style with meaning, wear it to show your appreciation for Africa's vibrant heritage and enduring spirit.
+</p>
+<span class="modal-price">R500 · WSP R300 EX VAT</span>
 </div>
 </div>
-<h4 style="margin-top:0.6rem;">Cape Town Adjustable Cord Bracelet</h4>
-<p>Silver, 14k gold plating — inspired by Table Mountain and the ocean.</p>
-<span class="modal-price">R500  ·  WSP R300 EX VAT</span>
-</div>
-<div class="modal-item">
-<div class="modal-image-card" style="min-height:180px; background-image: url(https://drive.google.com/thumbnail?id=1-Ss0EU_h5vzVzjHYHdcyNqCt9NVf1dN4&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">My Africa Collection</span>
-<div class="modal-image-title" style="font-size:1.1rem;">Elephant</div>
-</div>
-</div>
-<h4 style="margin-top:0.6rem;">Elephant Adjustable Cord Bracelet</h4>
-<p>Silver, 14k gold plating — strength, loyalty and grace.</p>
-<span class="modal-price">R500  ·  WSP R300 EX VAT</span>
-</div>
-<div class="modal-item">
-<div class="modal-image-card" style="min-height:180px; background-image: url(https://drive.google.com/thumbnail?id=1Z7WzQebuE1NfsAAn6f8-F8MlUrTAGl6T&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">My Africa Collection</span>
-<div class="modal-image-title" style="font-size:1.1rem;">My Africa</div>
-</div>
-</div>
-<h4 style="margin-top:0.6rem;">My Africa Adjustable Cord Bracelet</h4>
-<p>Silver, 14k gold plating — a silhouette of the continent.</p>
-<span class="modal-price">R500  ·  WSP R300 EX VAT</span>
-</div>
-</div>
+<p class="bracelet-block-note">
+            *All Shimansky adjustable cord bracelets are available in either silver with
+            14k yellow gold plating or plain silver in black, brown, red and pink cord.
+        </p>
 </div>
 </div>
 <div class="modal-slide-panel">
-<div class="modal-section" style="padding:0; border:0;">
-<h3>Tanzanite Collection</h3>
-<p>
-                                For nearly three decades, Shimansky has sourced the finest quality
-                                Tanzanite directly from the Maasai tribe, certified in accordance with
-                                the Tanzanite International Grading Standard.
-                            </p>
-<div class="modal-grid">
-<div class="modal-item">
-<div class="modal-image-card" style="min-height:180px; background-image: url(https://drive.google.com/thumbnail?id=1vY0pAYh6JRoHGPpgVO3O3RHr4xhkRGPd&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">Tanzanite Collection</span>
-<div class="modal-image-title" style="font-size:1.1rem;">Dancing Tanzanite</div>
+<div class="modal-section corporate-tanzanite-section" style="padding:0; border:0;">
+<div class="corporate-unified-heading">
+<span class="foundation-design2-eyebrow">Tanzanite Collection</span>
+<h3 class="foundation-design2-title">Tanzanite &amp; Southern Cross</h3>
+<div class="foundation-design2-rule"></div>
+<p class="foundation-design2-copy">For nearly three decades, Shimansky has sourced the finest quality Tanzanite directly from the Maasai tribe, certified in accordance with the Tanzanite International Grading Standard.</p>
 </div>
+
+<div class="modal-grid corporate-tanzanite-grid">
+<div class="modal-item tanzanite-gifting-card">
+<div class="tanzanite-fade-gallery" data-fader-offset="0" data-tanzanite-fader="">
+<div class="tanzanite-fade-slide active">
+<img alt="Shimansky Dancing Tanzanite Pendant" src="https://drive.google.com/thumbnail?id=1vY0pAYh6JRoHGPpgVO3O3RHr4xhkRGPd&amp;sz=s1800"/>
 </div>
-<h4 style="margin-top:0.6rem;">Dancing Tanzanite Pendant</h4>
-<p>Wishbone pendant, crafted to let the Tanzanite move and catch the light.</p>
-<span class="modal-price">4.0MM SILVER: R2000 WSP  ·  5.0MM SILVER: R3500 WSP</span>
+<div class="tanzanite-fade-slide">
+<img alt="Shimansky Dancing Tanzanite Pendant" src="https://drive.google.com/thumbnail?id=16bbQFsTkn8mdmbFFgWLYjTREh3HUhONK&amp;sz=s1800"/>
 </div>
-<div class="modal-item">
-<div class="modal-image-card" style="min-height:180px; background-image: url(https://drive.google.com/thumbnail?id=1gtnh6Gd2T80kSk-T46BVzFUr8AMfHxMk&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">Tanzanite Collection</span>
-<div class="modal-image-title" style="font-size:1.1rem;">Solitaire</div>
+
+<div aria-hidden="true" class="tanzanite-fade-dots"></div>
 </div>
+<h4>Dancing Tanzanite Pendant</h4>
+<p>Wishbone pendant, crafted to let the Tanzanite move and catch the light.
+    <br>
+    <br>
+    This Dancing Tanzanite wishbone pendant has been expertly crafted to allow the Tanzanite to move, capturing the light with every heartbeat and dancing freely with a 5.00mm round, lustrous Tanzanite, ± 0.53 carat.
+</p>
+<span class="modal-price">4.0MM SILVER: R2000 WSP · 5.0MM SILVER: R3500 WSP</span>
 </div>
-<h4 style="margin-top:0.6rem;">Tanzanite Solitaire Pendant</h4>
-<p>A timeless round-cut Tanzanite solitaire in silver.</p>
+<div class="modal-item tanzanite-gifting-card">
+<div class="tanzanite-fade-gallery" data-fader-offset="1250" data-tanzanite-fader="">
+
+<div class="tanzanite-fade-slide active">
+<img alt="Shimansky Tanzanite Solitaire Pendant" src="https://drive.google.com/thumbnail?id=166l2YiuT4usyHLC3BFNw2p3qW2g9x9gR&amp;sz=s1800"/>
+</div>
+<div aria-hidden="true" class="tanzanite-fade-dots"></div>
+</div>
+<h4>Tanzanite Solitaire Pendant</h4>
+<p>A timeless round-cut Tanzanite solitaire in silver. <br>
+<br>
+Elevate your everyday style with this timeless solitaire pendant. The round-cut Tanzanite captivates with its rich, vibrant hue, designed for those who appreciate rare, high-quality gemstones and seek a piece that exudes luxury, refinement and timeless beauty.</p>
 <span class="modal-price">ROUND TANZANITE SILVER: R1500 WSP</span>
 </div>
+<div class="modal-item tanzanite-gifting-card">
+<div class="tanzanite-fade-gallery" data-fader-offset="2500" data-tanzanite-fader="">
+<div class="tanzanite-fade-slide active">
+<img alt="Shimansky Southern Cross Tanzanite Pendant" src="https://drive.google.com/thumbnail?id=1qU0O4JZjvVB7_gfiipFUjDPdtBxvGUUE&amp;sz=s1800"/>
 </div>
-<div class="modal-image-card" style="min-height:200px; margin-top:1.2rem; background-image: url(https://drive.google.com/thumbnail?id=1K9EURqyWGxFhgstP9H_GTRjtVtuV0J63&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">Southern Cross Collection</span>
-<div class="modal-image-title">Older Than The Stars</div>
+<div class="tanzanite-fade-slide">
+<img alt="Shimansky Southern Cross Tanzanite Pendant" src="https://drive.google.com/thumbnail?id=1tO6VUurdMILzhE_pX6diUtqsNggYlRnn&amp;sz=s1800"/>
 </div>
+
+<div aria-hidden="true" class="tanzanite-fade-dots"></div>
 </div>
-<p style="margin-top:0.75rem;">
-                                Containing diamonds older than the constellation they represent, the
-                                Southern Cross Collection is made from the finest white, yellow or rose
-                                gold, hand-selected Ayanda Tanzanite and round brilliant-cut diamonds.
-                            </p>
+<h4>Southern Cross Tanzanite Pendant</h4>
+<p>Containing diamonds older than the constellation they represent, the Southern Cross Collection is made from the finest white, yellow or rose gold, hand-selected Ayanda Tanzanite and round brilliant-cut diamonds. <br> 
+    <br>
+South of the equator, the night skies are illuminated by some of the brightest stars in the galaxy: the Southern Cross. Containing diamonds older than the constellation they represent, this shining star formation is exclusive to Shimansky.</p>
+
 </div>
-</div>
-<div class="modal-slide-panel">
-<div class="modal-section" style="padding:0; border:0;">
-<h3>Contact Us</h3>
-<div class="modal-image-card" style="min-height:260px; background-image: url(https://drive.google.com/thumbnail?id=1jxMGszxpwsrl_Pxc99NpbuqEjTJxlYw4&amp;sz=s1800);">
-<div class="modal-image-copy">
-<span class="modal-image-label">Get In Touch</span>
-<div class="modal-image-title">Corporate Gifting Enquiries</div>
+
+<span class="modal-price">R1500 WSP</span>
 </div>
 </div>
-<p style="margin-top:0.75rem;">
-<strong>Phone:</strong> +27 (79) 274 3530<br/>
-<strong>Email:</strong> tours@shimansky.com
-                            </p>
+</div>
+</div>
+<div class="modal-slide-panel corporate-contact-panel">
+<div class="modal-section corporate-contact-section" style="padding:0; border:0;">
+<div class="corporate-unified-heading">
+<span class="foundation-design2-eyebrow">Corporate Gifting Enquiries</span>
+<h3 class="foundation-design2-title">Contact Us</h3>
+<div class="foundation-design2-rule"></div>
+<p class="foundation-design2-copy">
+                For corporate gifting enquiries, contact the Shimansky team using the details below.
+            </p>
+</div>
+<div class="corporate-contact-layout">
+<div class="corporate-contact-image-wrap">
+<img alt="Shimansky corporate gifting" class="corporate-contact-image" src="https://drive.google.com/thumbnail?id=1jxMGszxpwsrl_Pxc99NpbuqEjTJxlYw4&amp;sz=s1800"/>
+</div>
+<div class="corporate-contact-details">
+<span class="corporate-contact-kicker">Get In Touch</span>
+<h4 class="corporate-contact-title">Corporate Gifting Enquiries</h4>
+<div class="corporate-contact-rule"></div>
+<div class="corporate-contact-item">
+<span class="corporate-contact-label">Phone</span>
+<a class="corporate-contact-link" href="tel:+27792743530">+27 (79) 274 3530</a>
+</div>
+<div class="corporate-contact-item">
+<span class="corporate-contact-label">Email</span>
+<a class="corporate-contact-link" href="mailto:tours@shimansky.com">tours@shimansky.com</a>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -4506,7 +5178,7 @@
 <button class="pill pill-in pill-button read-more modal-trigger" data-modal="m-ayanda">
                     Ayanda Tanzanite
                 </button>
-                <!--
+<!--
 <a class="" href="shimansky-gifting-2026.html">
 <button class="pill pill-in pill-button read-more">
                         Corporate Gifting Catalog
@@ -5368,6 +6040,87 @@
                 btn.textContent = expanded ? "Read less" : "Read more";
             });
         });
-    </script>
+    
+
+        // Corporate Gifting: independent fading image slideshows for each My Africa bracelet.
+        document.querySelectorAll("#m-corporate-gifting [data-bracelet-fader]").forEach((gallery) => {
+            const slides = Array.from(gallery.querySelectorAll(".bracelet-fade-slide"));
+            const dotsWrap = gallery.querySelector(".bracelet-fade-dots");
+            if (!slides.length) return;
+
+            let current = 0;
+            let timer = null;
+            const offset = parseInt(gallery.dataset.faderOffset || "0", 10);
+
+            if (dotsWrap) {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement("span");
+                    dot.className = "bracelet-fade-dot" + (i === 0 ? " active" : "");
+                    dotsWrap.appendChild(dot);
+                });
+            }
+
+            function show(index) {
+                slides[current].classList.remove("active");
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add("active");
+
+                if (dotsWrap) {
+                    dotsWrap.querySelectorAll(".bracelet-fade-dot").forEach((dot, i) => {
+                        dot.classList.toggle("active", i === current);
+                    });
+                }
+            }
+
+            function start() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(() => show(current + 1), 3800);
+            }
+
+            // Stagger the three product galleries so they do not all fade at once.
+            setTimeout(start, offset);
+        });
+
+
+        // Corporate Gifting: independent fading galleries for Tanzanite products.
+        document.querySelectorAll("#m-corporate-gifting [data-tanzanite-fader]").forEach((gallery) => {
+            const slides = Array.from(gallery.querySelectorAll(".tanzanite-fade-slide"));
+            const dotsWrap = gallery.querySelector(".tanzanite-fade-dots");
+            if (!slides.length) return;
+
+            let current = 0;
+            let timer = null;
+            const offset = parseInt(gallery.dataset.faderOffset || "0", 10);
+
+            if (dotsWrap) {
+                slides.forEach((_, i) => {
+                    const dot = document.createElement("span");
+                    dot.className = "tanzanite-fade-dot" + (i === 0 ? " active" : "");
+                    dotsWrap.appendChild(dot);
+                });
+            }
+
+            function show(index) {
+                slides[current].classList.remove("active");
+                current = (index + slides.length) % slides.length;
+                slides[current].classList.add("active");
+
+                if (dotsWrap) {
+                    dotsWrap.querySelectorAll(".tanzanite-fade-dot").forEach((dot, i) => {
+                        dot.classList.toggle("active", i === current);
+                    });
+                }
+            }
+
+            function start() {
+                if (timer) clearInterval(timer);
+                if (slides.length > 1) {
+                    timer = setInterval(() => show(current + 1), 4100);
+                }
+            }
+
+            setTimeout(start, offset);
+        });
+</script>
 </body>
 </html>
