@@ -3599,6 +3599,48 @@
             }
         }
 
+
+        /* ================================
+       CORPORATE GIFTING HERO (#s4): keep the title clear of the rings
+       on wide / short laptop screens (e.g. MacBook Air with browser bars).
+       Lifts the artwork, sizes the text from the screen height too, and keeps
+       the heading on one line so the block stays short.
+       ================================ */
+        @media (min-width: 769px) {
+            #s4 .slide-bg .slide {
+                background-position: center 100% !important;
+            }
+
+            #s4 .content {
+                padding-bottom: 2.6rem !important;
+            }
+
+            #s4 .exp-title {
+                font-size: clamp(1.9rem, min(4vw, 6.2vh), 3.4rem) !important;
+                max-width: min(100%, 1000px) !important;
+                line-height: 1.05;
+            }
+
+            #s4 .exp-title em {
+                white-space: nowrap;
+            }
+
+            #s4 .exp-tag {
+                margin-bottom: 0.6rem;
+            }
+        }
+
+        /* very wide and short screens: tuck the text block down further */
+        @media (min-width: 769px) and (max-height: 820px) {
+            #s4 .content {
+                padding-bottom: 2rem !important;
+            }
+
+            #s4 .exp-title {
+                font-size: clamp(1.7rem, min(3.4vw, 5.4vh), 2.8rem) !important;
+            }
+        }
+
 </style>
 </head>
 <body>
@@ -5931,7 +5973,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
             }
         });
 
-        // Only one testimonial video plays at a time
+        // one testimonial video plays at a time
         document.addEventListener(
             "play",
             (e) => {
@@ -5945,7 +5987,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
             true,
         );
 
-        // Popup image slideshow galleries
+        // popup image slideshow galleries
         document.querySelectorAll(".popup-slide-gallery").forEach((gallery) => {
             const slides = gallery.querySelectorAll(".popup-slide");
             const dotsWrap = gallery.querySelector(".popup-gallery-dots");
@@ -5977,7 +6019,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
                     // Never play while the popup itself isn't open — otherwise every
                     // gallery's background timer would keep cycling behind the scenes.
                     if (isGalleryVisible()) {
-                        // Always start muted — the visitor taps the video to turn sound on.
+                        // this muted video
                         nextVideo.muted = true;
                         nextVideo.play().catch(() => { });
                     }
@@ -6014,7 +6056,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
                 if (slides.length <= 1) return;
                 const activeVideo = slides[current].querySelector("video");
                 if (activeVideo) {
-                    // Advance once the video finishes playing, instead of a fixed delay
+                    // move to the next video after video is finish
                     const onEnded = () => {
                         activeVideo.removeEventListener("ended", onEnded);
                         show(current + 1);
@@ -6093,7 +6135,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
             video.addEventListener("volumechange", syncIcon);
         });
 
-        // "Read more" / "Read less" toggle for long testimonial quotes.
+        // Read more / Read less
         document.querySelectorAll(".testimonial-read-more").forEach((btn) => {
             const quote = btn.previousElementSibling;
             if (!quote || !quote.classList.contains("testimonial-quote")) return;
@@ -6104,7 +6146,7 @@ South of the equator, the night skies are illuminated by some of the brightest s
         });
     
 
-        // Corporate Gifting: independent fading image slideshows for each My Africa bracelet.
+        // corporate gifting fading image slideshows for each My Africa bracelet.
         document.querySelectorAll("#m-corporate-gifting [data-bracelet-fader]").forEach((gallery) => {
             const slides = Array.from(gallery.querySelectorAll(".bracelet-fade-slide"));
             const dotsWrap = gallery.querySelector(".bracelet-fade-dots");
